@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сто Евангельских Трактатов</title>
+    <title>100 Евангельских Трактатов</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="_wrapper">
+    <div class="_wrapper" id="wrapper">
+        <dialog class="dialog" id="dialog">
+            <button class="dialog__close">Закрыть</button>
+            <h1 class="dialog__title">Dialog title</h1>
+            <audio src="/audio/001.mp3"></audio>
+            <p class="dialog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vitae soluta sit corporis doloremque, porro sint veritatis perferendis deserunt quisquam? Atque illo deleniti consequatur earum facere nesciunt beatae, reiciendis voluptatum aliquid voluptatem qui vel et reprehenderit rerum sequi! Ipsum quam laborum, quibusdam illum voluptate, deleniti perspiciatis illo velit adipisci deserunt nisi ducimus quo praesentium tempore sint laboriosam id dolores. Delectus.</p>
+        </dialog>
         <div class="header">
-            <div class="header__container _container">
-                <a href="" class="header__title">100 Евангельских Трактатов</a>
-            </div>
+           <a href="#wrapper" class="header__title">100 Евангельских Трактатов</a>
         </div>
         <div class="main">
             <div class="main__container _container">
-                <h1 class="header__title">Main title</h1>
+                <section class="main__section">
+                    <h2 class="section__title">О проекте</h2>
+                    <p class="section__text">Мир Вам! Мы рады представить проект "100 Евангельских Трактатов", в которым мы хотим возродить искусство Евангельскогго трактата. Что такое Евангельский трактат? Это проповедь или, по-другому, презентация самого главного в христианской вере: Евангелия. Благая весть, по-гречески, Евангелион содержит в себе истины о том, что Бог сотворил этот мир и имеет полное право определять смысл жизни человека. А потому человек несёт ответственность перед Творцом за свои грехи. Евангелие определяет грех не как игривое заступание за черту, нанесённую веткой на песке, а как тяжелейшее оскорбление Личности Бога. Бог же, будучи совершенным, не намерен терпеть, когда Его оскорбляют. Поэтому всех людей ожидает Божий суд, на котором не будет никаких "взвешиваний" добрых и злых дел. Наличие одного греха это достаточное основание для приговора к вечному наказанияю. И у человека нет никаких средств снять с себя вину грехов. Но Бог отдал Своего святого Сына в жертву за грехи на голгофском кресте. Теперь любой человек может оправдаться даром на основании жертвы Христа. Евангелие говорит каждому человеку поверить в Спасителя и обещает вечную жизнь с Ним в новом мире без греха и страданий. Все эти имтины, которые составляют Евангелие, чрезвычайно глубоки. И очень трудно объяснять глубогие вещи доступно. Именно поэтому мы называем Евангельский трактат искусством. Именно поэтому мы привлекли к проекту только обученных и проверенных проповедников Библии. Мы надеемся, что, читая и слушая Евангельские трактаты, Вы не только поймёте суть пути спасения, но и проникнитесь глубиной этих истин. Молимся о спасении Вашей души. </p>
+                </section>
+                <section class="main__section">
+                    <h2 class="section__title">Трактат 001 | Временный перед лицом Вечного<br>Псалом. 89 | Алексей Прокопенко</h2>
+                    <button id="open">Open Dialog</button>
+                    <p class="section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum exercitationem pariatur vitae quo! Eveniet omnis dolores enim libero earum odit porro nemo incidunt voluptas veritatis consequuntur error, eos ex! Repellendus nihil possimus eligendi similique quibusdam? Fuga explicabo assumenda nobis autem illum fugit! Non odit nemo voluptate laboriosam cum quasi sunt id odio nesciunt est, at obcaecati blanditiis dolore quam maxime officia natus vero praesentium dolores quas beatae commodi, deleniti voluptas. Deleniti dignissimos cupiditate esse illum quasi aspernatur iure vel eos? Sapiente dolor soluta labore possimus architecto laudantium alias distinctio quasi, unde aspernatur numquam molestiae at rem consequatur, magnam illo rerum quibusdam, in aliquid ipsam adipisci reiciendis. Quibusdam consectetur dolorum culpa, esse, incidunt at, commodi eveniet laborum asperiores perspiciatis dicta vero.</p>
+                </section>
             </div>
         </div>
         <div class="footer">
