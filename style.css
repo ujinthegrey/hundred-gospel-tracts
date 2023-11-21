@@ -105,14 +105,16 @@ meter {
 /* --------------------BODY----------------- */
 body {
     background-color: #222;
-    /* font-family: 'Bitter', serif; */
-    font-family: 'Noto Serif', serif;
+    font-family: 'Bitter', serif;
     font-size: 20px;
     color:#bba;
 }
+body ._locked {
+    overflow: hidden;
+}
 ._wrapper {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -124,10 +126,47 @@ body {
 
 /* --------------------DIALOG----------------- */
 .dialog {
-    position: absolute;
+    position: fixed;
+    background-color: #222;
+    height: 100vh;
+    width: 100vw;
+    color:#bba;
+    border: none;
+    z-index: 70;
 }
-dialog::backdrop {
-    background: rgba(0,0,0,0.7);
+.dialog__container {
+    display: flex;
+    flex-direction: column;
+}
+.dialog__header {
+    display: flex;
+    justify-content: space-between;
+}
+.dialog__number {
+}
+.dialog__close {
+}
+.dialog__info {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.dialog__bible {
+}
+.dialog__title {
+    color: #bb8;
+    font-size: 26px;
+}
+.dialog__author {
+}
+.dialog__audio {
+    text-align: center;
+}
+.dialog__text {
+}
+.dialog__date {
 }
 
 /* --------------------HEADER----------------- */

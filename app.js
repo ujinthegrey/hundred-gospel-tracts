@@ -1,7 +1,14 @@
+const body = document.getElementById('body')
 const dialog = document.getElementById('dialog')
 const openBtn = document.getElementById('open')
+const closeBtn = document.getElementById('close')
 
 openBtn.onclick = () => {
-    console.log('open!!!');
+    body.classList.toggle('._locked')
     dialog.showModal()
+}
+
+closeBtn.onclick = () => {
+    dialog.close()
+    body.classList.toggle('._locked')
 }
