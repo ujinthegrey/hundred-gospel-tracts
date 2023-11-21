@@ -109,7 +109,7 @@ body {
     font-size: 20px;
     color:#bba;
 }
-body ._locked {
+._locked {
     overflow: hidden;
 }
 ._wrapper {
@@ -124,9 +124,17 @@ body ._locked {
     max-width: 1100px;
 }
 
+/* --------------------BUTTON----------------- */
+button:hover {
+    cursor: pointer;
+    color: #ddd;
+}
+
 /* --------------------DIALOG----------------- */
-.dialog {
+dialog {
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #222;
     height: 100vh;
     width: 100vw;
@@ -160,13 +168,21 @@ body ._locked {
     font-size: 26px;
 }
 .dialog__author {
+    transition: color .2s;
+}
+.dialog__author:hover {
+    cursor: pointer;
+    color: #ddd;
 }
 .dialog__audio {
     text-align: center;
+    color: #00f;
 }
 .dialog__text {
 }
 .dialog__date {
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* --------------------HEADER----------------- */
@@ -189,6 +205,11 @@ body ._locked {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #bb8;
+    transition: color .2s;
+}
+.header__title:hover {
+    cursor: pointer;
+    color: #ddd;
 }
 
 /* --------------------MAIN----------------- */
@@ -225,4 +246,11 @@ body ._locked {
 }
 .footer__title {
     
+}
+.footer__link {
+    transition: color .2s;
+}
+.footer__link:hover {
+    cursor: pointer;
+    color:#ddd;
 }
