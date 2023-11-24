@@ -89,7 +89,7 @@ list.onclick = (e) => {
     const index = [...e.target.parentNode.children].indexOf(e.target)
     const tract = tracts[index] || ''
 
-    if (tract.audio) audio.setAttribute('src', tract.audio || '')
+    if (tract.audio) audio.setAttribute('src', '..' + tract.audio || '')
     author.textContent = tract.author || ''
     author.setAttribute('href', tract.link || '*')
     bible.textContent = tract.bible || ''
