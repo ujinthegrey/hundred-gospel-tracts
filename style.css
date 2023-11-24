@@ -229,7 +229,8 @@ dialog {
     align-items: center;
 }
 .main__list li{
-    margin-top: 20px;    
+    margin-top: 20px;
+    transition: letter-spacing .5s;
 }
 .main__link {
     text-align: center;
@@ -240,6 +241,7 @@ dialog {
 .main__list li:hover {
     cursor: pointer;
     color:#ddd;
+    text-shadow: #ddd;
 }
 
 .main__section {

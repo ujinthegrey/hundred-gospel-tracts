@@ -12,7 +12,7 @@ const tracts = [
         "title": 'О проекте',
     },
     {
-        "audio": '/audio/001.mp3',
+        "audio": 'audio/001.mp3',
         "author": 'Алексей Прокопенко',
         "bible": 'Псалом 89',
         "bibleText": '1 Молитва Моисея, человека Божия',
@@ -24,7 +24,7 @@ const tracts = [
         "title": 'Временный перед лицом Вечного',
     },
     {
-        "audio": '/audio/001.mp3',
+        "audio": 'audio/001.mp3',
         "author": 'Евгений Кошелев',
         "bible": 'Евангелие от Иоанна 3',
         "bibleText": '',
@@ -36,7 +36,7 @@ const tracts = [
         "title": 'Взгляни на медного змея',
     },
     {
-        "audio": '/audio/001.mp3',
+        "audio": 'audio/001.mp3',
         "author": 'Дмитрий Чубукин',
         "bible": 'Бытие 22',
         "bibleText": '',
@@ -48,7 +48,7 @@ const tracts = [
         "title": 'Бог усмотрит Себе Агнца',
     },
     {
-        "audio": '/audio/001.mp3',
+        "audio": 'audio/001.mp3',
         "author": 'Андрей Толмачев',
         "bible": 'Матфея 19',
         "bibleText": '',
@@ -89,7 +89,13 @@ list.onclick = (e) => {
     const index = [...e.target.parentNode.children].indexOf(e.target)
     const tract = tracts[index] || ''
 
-    if (tract.audio) audio.setAttribute('src', '..' + tract.audio || '')
+    // for github
+    if (tract.audio) audio.setAttribute('src', tract.audio || '')
+
+    // for local server
+    //if (tract.audio) audio.setAttribute('src', '/' + tract.audio || '')
+
+
     author.textContent = tract.author || ''
     author.setAttribute('href', tract.link || '*')
     bible.textContent = tract.bible || ''
