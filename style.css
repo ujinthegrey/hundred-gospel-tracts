@@ -116,8 +116,7 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column;    
 }
 ._container {
     margin: 0 auto;
@@ -166,7 +165,7 @@ dialog {
 }
 .dialog__title {
     color: #bb8;
-    font-size: 26px;
+    font-size: 32px;
 }
 .dialog__author {
     transition: color .2s;

@@ -40,7 +40,7 @@ const tracts = [
         "author": 'Дмитрий Чубукин',
         "bible": 'Бытие 22',
         "bibleText": '',
-        "date": 'Самара, 2020',
+        "date": 'Екатеринбург, 2020',
         "id": 3,
         "link": 'https://www.youtube.com/@alprokope',
         "number": '003',
@@ -49,10 +49,10 @@ const tracts = [
     },
     {
         "audio": '/audio/001.mp3',
-        "author": 'Дмитрий Чубукин',
-        "bible": 'Псалом 89',
+        "author": 'Андрей Толмачев',
+        "bible": 'Матфея 19',
         "bibleText": '',
-        "date": 'Самара, 2020',
+        "date": 'Пенза, 2020',
         "id": 4,
         "link": 'https://www.youtube.com/@alprokope',
         "number": '004',
@@ -98,12 +98,12 @@ list.onclick = (e) => {
     if (tract.number) number.textContent = `#${tract.number}` || ''
     text.textContent = tract.text || ''
     
-    body.classList.toggle('._locked')
+    body.classList.toggle('_locked')
     dialog.showModal()
 }
 
 
 closeBtn.onclick = () => {
     dialog.close()
-    body.classList.toggle('._locked')
+    body.classList.toggle('_locked')
 }
