@@ -117,6 +117,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+
 }
 ._container {
     margin: 0 auto;
@@ -215,14 +216,41 @@ dialog {
 /* --------------------MAIN----------------- */
 .main {
     margin: 60px 0px;
-    flex: auto;
+    min-height: 60vh;
     display: flex;
 }
 .main__container {
     display: flex;
     flex-direction: column;
 }
+.main__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__list li{
+    margin-top: 20px;    
+}
+.main__link {
+    text-align: center;
+    color: #bba;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+.main__list li:hover {
+    cursor: pointer;
+    color:#ddd;
+}
+
 .main__section {
+}
+.section__link {
+    text-align: center;
+    margin-top: 20px;
+    color: #bba;
+    letter-spacing: 2px;
+    word-spacing: 10px;
 }
 .section__title {
     text-align: center;
@@ -241,7 +269,7 @@ dialog {
     background-color: #111;
 }
 .footer__container {
-    height: 300px;
+    min-height: 700px;
     text-align: center;
 }
 .footer__title {
@@ -253,4 +281,8 @@ dialog {
 .footer__link:hover {
     cursor: pointer;
     color:#ddd;
+}
+.footer__note {
+    margin-top: 40px;
+    font-size: 14px;
 }
