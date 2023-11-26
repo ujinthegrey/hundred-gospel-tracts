@@ -108,17 +108,22 @@ body {
     font-family: 'Bitter', serif;
     font-size: 20px;
     color:#bba;
+    height: 100%;
+    width: 100%;
 }
 ._locked {
     overflow: hidden;
+    height: 0px;
 }
 ._wrapper {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    overflow: hidden;    
 }
 ._container {
+    height: 100%;
     margin: 0 auto;
     padding: 10px 15px;
     max-width: 1100px;
@@ -136,11 +141,11 @@ dialog {
     top: 0;
     left: 0;
     background-color: #222;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     color:#bba;
     border: none;
-    z-index: 70;
+    z-index: 70;    
 }
 .dialog__container {
     display: flex;
@@ -159,6 +164,7 @@ dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
 }
 .dialog__bible {
@@ -179,10 +185,12 @@ dialog {
     color: #00f;
 }
 .dialog__text {
+    line-height: 200%;
 }
 .dialog__date {
     margin-top: 20px;
     text-align: center;
+    padding-bottom: 60px;
 }
 
 /* --------------------HEADER----------------- */
@@ -202,10 +210,13 @@ dialog {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #bb8;
     transition: color .2s;
+    flex-wrap: wrap;
 }
 .header__title:hover {
     cursor: pointer;
@@ -227,6 +238,7 @@ dialog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .main__list li{
     margin-top: 20px;
