@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Евангельских Трактатов</title>
+  <!--   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>100 Евангельских Трактатов</title>
 </head>
-<body class="content-grid">
-    <div class="banner full-width">
-        <img src="" alt="banner">
+<body class="grid">
+    <div class="banner grid-full">
+        <!-- <img src="./img/banner.png" alt="banner"> use background-image instead -->
     </div>
-    <h1 class="title">СТО ЕВАНГЕЛЬСКИХ ТРАКТАТОВ</h1>
-    <section class="about">
+    <h1 class="title grid-content">СТО ЕВАНГЕЛЬСКИХ ТРАКТАТОВ</h1>
+    <section class="about grid-content">
         <h2 class="about__title">О проекте</h2>
         <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, alias facilis, ipsam aspernatur inventore consectetur quod commodi laboriosam quaerat ab quam ex. Iure ea distinctio saepe voluptas temporibus pariatur nemo cupiditate incidunt modi optio! Sed voluptate doloribus et qui iusto in repudiandae. Aliquam neque provident minima, soluta illo cupiditate reiciendis.</p>
     </section>
-    <article class="tract">
+    <article class="tract grid-content">
         <p class="tract__number">#001</p>
         <p class="tract__bible">Евангелие от Иоанна 3</p>
         <h2 class="tract__title">Взгляни на медного змея</h2>
@@ -24,7 +30,7 @@
         <p class="tract__city">Самара</p>
         <time class="tract__date">14 января 2024</time>
     </article>
-    <article class="tract">
+    <article class="tract grid-content">
         <p class="tract__number">#002</p>
         <p class="tract__bible">Евангелие от Иоанна 3</p>
         <h2 class="tract__title">Взгляни на медного змея</h2>
@@ -33,7 +39,7 @@
         <p class="tract__city">Екатеринбург</p>
         <time class="tract__date">20 января 2024</time>
     </article>
-    <article class="tract">
+    <article class="tract grid-content">
         <p class="tract__number">#003</p>
         <p class="tract__bible">Евангелие от Иоанна 3</p>
         <h2 class="tract__title">Взгляни на медного змея</h2>
@@ -42,8 +48,8 @@
         <p class="tract__city">Берлин</p>
         <time class="tract__date">14 февряля 2024</time>
     </article>
-    <footer class="footer full-width content-grid">
-        <nav class="footer__nav">
+    <footer class="footer grid-full grid">
+        <nav class="footer__nav grid-content">
             <h3 class="footer__title">Полезные ссылки</h3>
             <ul class="nav__list">
                 <li class="nav__item"><a href="" class="nav__link"></a></li>
@@ -53,11 +59,12 @@
                 <li class="nav__item"><a href="" class="nav__link"></a></li>
             </ul>
         </nav>
-        <p>&#169; <date>2023</date> Eugene Koshelev</p>
+        <p class="footer__copy grid-content">&#169; <date>2023</date> Eugene Koshelev</p>
     </footer>
 
-    <header class="player full-width content-grid">
-        <audio src="" class="player__audio" controls></audio>
+    <header class="player grid-full grid">
+        <h2 class="player__title grid-content">Название трека Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, modi. Exercitationem officia magni commodi distinctio cumque sed delectus, corporis cupiditate.</h2>
+        <audio src="" class="player__audio grid-content" controls></audio>
     </header>
     <script src="app.js" type="module"></script>
 </body>

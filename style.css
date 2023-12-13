@@ -105,35 +105,102 @@ meter {
 /* --------------------BODY----------------- */
 body {
     background-color: #222;
-    font-family: 'Bitter', serif;
+    /* font-family: 'Bitter', serif; */
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    line-height: 200%;
     color:#bba;
 }
 
 /* --------------------GRID----------------- */
-.content-grid {
+.grid {
     display: grid;
     grid-template-columns: [full-start] 10px 1fr [content-start] minmax(300px, 900px) [content-end]  1fr 10px [full-end];
-    row-gap: 20px;
 }
-.content-grid > * {
+.grid > * {
+    margin-top: 20px;
+}
+.grid-content {
     grid-column: content;
 }
-.content-grid > .full-width {
+.grid-full {
     grid-column: full;
 }
 
 /* -----------------BANNER------------------ */
 .banner {
-    margin: 0;          /* compensate row-gap^ 20px in .content-grid */
-    height: 280px;
+    margin: 0;          /* compensate row-gap: 20px in .content-grid */
+    height: 300px;
     background-color: #ccc;
+    background-image: url('./img/banner-5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* .banner img {
+    display: block;
+    max-width: 100%;
+} */
+
+/* ----------------TITLE-------------------- */
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #bb8;
+    letter-spacing: 4px;
+}
+@media (max-width: 600px) {
+    .title {
+        font-size: 32px;      
+    }
+}
+@media (max-width: 400px) {
+    .title {
+        font-size: 30px;      
+    }
+}
+
+/* ---------------ABOUT---------------------- */
+.about {
+}
+.about__title {
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    color: #bb8;
+    letter-spacing: 4px;
+}
+.about__text {
+}
+
+/* ------------------TRACT-------------------- */
+.tract {
+}
+.tract__number {
+}
+.tract__bible {
+}
+.tract__title {
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    color: #bb8;
+    letter-spacing: 4px;
+}
+.tract__text {
+}
+.tract__author {
+}
+.tract__city {
+}
+.tract__date {
 }
 
 /* ------------------FOOTER------------------- */
 .footer {
     background-color: #111;
-    margin-bottom: 0px;
+    padding-bottom: 200px;
 }
 
 /* -----------------PLAYER------------------ */
@@ -142,12 +209,19 @@ body {
     position: sticky;
     bottom: 0;
     left: 0;
-    height: 60px;
+    height: 110px;
     width: 100%;
     overflow: hidden;
     background-color: #111;
 }
+.player__title {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
 .player__audio {
+    margin: auto;
     width: 100%;
-    height: 100%;
+    height: 60px;
 }
