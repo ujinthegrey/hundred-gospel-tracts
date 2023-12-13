@@ -1,2 +1,2 @@
 # hundred-gospel-tracts
-vanila site with gospel tract
+simple gospel tracts site with grids and vanilla js

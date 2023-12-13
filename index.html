@@ -6,46 +6,59 @@
     <title>100 Евангельских Трактатов</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-    <div class="_wrapper" id="wrapper">
-        <dialog class="dialog" id="dialog">
-            <div class="dialog__container _container">
-                <div class="dialog__header">
-                    <div class="dialog__number" id="number"></div>
-                    <button class="dialog__close" id="close">Закрыть</button>
-                </div>
-                <div class="dialog__info">
-                    <div class="dialog__bible" id="bible"></div>
-                    <h1 class="dialog__title" id="title"></h1>
-                    <a class="dialog__author" id="author" href="" target="_blank"></a>
-                    <audio src=""id="audio" controls class="dialog__audio"></audio>
-                </div>
-                <p class="dialog__text" id="text"></p>
-                <div class="dialog__date" id="date"></div>
-            </div>
-        </dialog>
-        <div class="header">
-           <a href="#wrapper" class="header__title">100 Евангельских Трактатов</a>
-        </div>
-        <div class="main">
-            <div class="main__container _container">
-                <ul class="main__list">
-                    <!-- <li><a href="" class="main__link"></a>about</li>
-                    <li><a href="" class="main__link"></a>Временный перед лицом Вечного</li>
-                    <li><a href="" class="main__link"></a>Взгляни на медного змея</li>
-                    <li><a href="" class="main__link"></a>Бог усмотрит Себе Агнца</li>
-                    <li><a href="" class="main__link"></a>Что сделать мне доброго, чтобы иметь жизнь вечную?</li> -->
-                </ul>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer__container _container">
-                <h3 class="footer__title">Useful links</h3>
-                <a href="https://www.youtube.com/@EugeneKoshelev" target="_blank" class="footer__link">Евгений Кошелев</a>
-                <div class="footer__note">Дорогие друзья, эта страница создана как прототип к pet-проекту, который будет содержать реальные проповеди реальных проповедников в текстовом и аудио формате и функционал на React, firebase и tailwind.</div>
-            </div>
-        </div>
+<body class="content-grid">
+    <div class="banner full-width">
+        <img src="" alt="banner">
     </div>
+    <h1 class="title">СТО ЕВАНГЕЛЬСКИХ ТРАКТАТОВ</h1>
+    <section class="about">
+        <h2 class="about__title">О проекте</h2>
+        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, alias facilis, ipsam aspernatur inventore consectetur quod commodi laboriosam quaerat ab quam ex. Iure ea distinctio saepe voluptas temporibus pariatur nemo cupiditate incidunt modi optio! Sed voluptate doloribus et qui iusto in repudiandae. Aliquam neque provident minima, soluta illo cupiditate reiciendis.</p>
+    </section>
+    <article class="tract">
+        <p class="tract__number">#001</p>
+        <p class="tract__bible">Евангелие от Иоанна 3</p>
+        <h2 class="tract__title">Взгляни на медного змея</h2>
+        <p class="tract__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error eveniet deserunt sint quo. Quas at porro, modi dolore, tempore excepturi dignissimos tempora maxime ea vero aliquam nihil! Autem magni ex, cupiditate pariatur obcaecati totam odit voluptate laboriosam iste facilis ipsa sed, dicta mollitia recusandae aspernatur molestias officiis, laudantium eos minus numquam atque voluptas dolore placeat dolores? Perspiciatis optio neque illum, possimus a pariatur recusandae maiores quod, alias eius asperiores impedit fugiat vel error minima non dicta commodi provident itaque.</p>
+        <p class="tract__author">Евгений Кошелев</p>
+        <p class="tract__city">Самара</p>
+        <time class="tract__date">14 января 2024</time>
+    </article>
+    <article class="tract">
+        <p class="tract__number">#002</p>
+        <p class="tract__bible">Евангелие от Иоанна 3</p>
+        <h2 class="tract__title">Взгляни на медного змея</h2>
+        <p class="tract__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error eveniet deserunt sint quo. Quas at porro, modi dolore, tempore excepturi dignissimos tempora maxime ea vero aliquam nihil! Autem magni ex, cupiditate pariatur obcaecati totam odit voluptate laboriosam iste facilis ipsa sed, dicta mollitia recusandae aspernatur molestias officiis, laudantium eos minus numquam atque voluptas dolore placeat dolores? Perspiciatis optio neque illum, possimus a pariatur recusandae maiores quod, alias eius asperiores impedit fugiat vel error minima non dicta commodi provident itaque.</p>
+        <p class="tract__author">Дмитрий Чубукин</p>
+        <p class="tract__city">Екатеринбург</p>
+        <time class="tract__date">20 января 2024</time>
+    </article>
+    <article class="tract">
+        <p class="tract__number">#003</p>
+        <p class="tract__bible">Евангелие от Иоанна 3</p>
+        <h2 class="tract__title">Взгляни на медного змея</h2>
+        <p class="tract__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error eveniet deserunt sint quo. Quas at porro, modi dolore, tempore excepturi dignissimos tempora maxime ea vero aliquam nihil! Autem magni ex, cupiditate pariatur obcaecati totam odit voluptate laboriosam iste facilis ipsa sed, dicta mollitia recusandae aspernatur molestias officiis, laudantium eos minus numquam atque voluptas dolore placeat dolores? Perspiciatis optio neque illum, possimus a pariatur recusandae maiores quod, alias eius asperiores impedit fugiat vel error minima non dicta commodi provident itaque.</p>
+        <p class="tract__author">Владимир Дубинский</p>
+        <p class="tract__city">Берлин</p>
+        <time class="tract__date">14 февряля 2024</time>
+    </article>
+    <footer class="footer full-width content-grid">
+        <nav class="footer__nav">
+            <h3 class="footer__title">Полезные ссылки</h3>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="" class="nav__link"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"></a></li>
+            </ul>
+        </nav>
+        <p>&#169; <date>2023</date> Eugene Koshelev</p>
+    </footer>
+
+    <header class="player full-width content-grid">
+        <audio src="" class="player__audio" controls></audio>
+    </header>
     <script src="app.js" type="module"></script>
 </body>
 </html>

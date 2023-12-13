@@ -106,195 +106,48 @@ meter {
 body {
     background-color: #222;
     font-family: 'Bitter', serif;
-    font-size: 20px;
+    font-size: 24px;
     color:#bba;
-    height: 100%;
-    width: 100%;
-}
-._locked {
-    overflow: hidden;
-    height: 0px;
-}
-._wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;    
-}
-._container {
-    height: 100%;
-    margin: 0 auto;
-    padding: 10px 15px;
-    max-width: 1100px;
 }
 
-/* --------------------BUTTON----------------- */
-button:hover {
-    cursor: pointer;
-    color: #ddd;
+/* --------------------GRID----------------- */
+.content-grid {
+    display: grid;
+    grid-template-columns: [full-start] 10px 1fr [content-start] minmax(300px, 900px) [content-end]  1fr 10px [full-end];
+    row-gap: 20px;
+}
+.content-grid > * {
+    grid-column: content;
+}
+.content-grid > .full-width {
+    grid-column: full;
 }
 
-/* --------------------DIALOG----------------- */
-dialog {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #222;
-    height: 100%;
-    width: 100%;
-    color:#bba;
-    border: none;
-    z-index: 70;    
-}
-.dialog__container {
-    display: flex;
-    flex-direction: column;
-}
-.dialog__header {
-    display: flex;
-    justify-content: space-between;
-}
-.dialog__number {
-}
-.dialog__close {
-}
-.dialog__info {
-    margin: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-}
-.dialog__bible {
-}
-.dialog__title {
-    color: #bb8;
-    font-size: 32px;
-}
-.dialog__author {
-    transition: color .2s;
-}
-.dialog__author:hover {
-    cursor: pointer;
-    color: #ddd;
-}
-.dialog__audio {
-    text-align: center;
-    color: #00f;
-}
-.dialog__text {
-    line-height: 200%;
-}
-.dialog__date {
-    margin-top: 20px;
-    text-align: center;
-    padding-bottom: 60px;
+/* -----------------BANNER------------------ */
+.banner {
+    margin: 0;          /* compensate row-gap^ 20px in .content-grid */
+    height: 280px;
+    background-color: #ccc;
 }
 
-/* --------------------HEADER----------------- */
-.header {
-    background-color: #111;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.header__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #bb8;
-    transition: color .2s;
-}
-.header__title:hover {
-    cursor: pointer;
-    color: #ddd;
-}
-
-/* --------------------MAIN----------------- */
-.main {
-    margin: 60px 0px;
-    min-height: 60vh;
-    display: flex;
-}
-.main__container {
-    display: flex;
-    flex-direction: column;
-}
-.main__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.main__list li{
-    margin-top: 20px;
-    transition: letter-spacing .5s;
-}
-.main__link {
-    text-align: center;
-    color: #bba;
-    letter-spacing: 2px;
-    word-spacing: 10px;
-}
-.main__list li:hover {
-    cursor: pointer;
-    color:#ddd;
-    text-shadow: #ddd;
-}
-
-.main__section {
-}
-.section__link {
-    text-align: center;
-    margin-top: 20px;
-    color: #bba;
-    letter-spacing: 2px;
-    word-spacing: 10px;
-}
-.section__title {
-    text-align: center;
-    margin-top: 20px;
-    color: #bb8;
-    font-style: italic;
-    letter-spacing: 2px;
-    word-spacing: 10px;
-}
-.section__text {
-    margin: 20px 0px;
-    word-spacing: 6px;
-}
-/* --------------------FOOTER----------------- */
+/* ------------------FOOTER------------------- */
 .footer {
     background-color: #111;
+    margin-bottom: 0px;
 }
-.footer__container {
-    min-height: 700px;
-    text-align: center;
+
+/* -----------------PLAYER------------------ */
+.player {
+    margin: 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #111;
 }
-.footer__title {
-    
-}
-.footer__link {
-    transition: color .2s;
-}
-.footer__link:hover {
-    cursor: pointer;
-    color:#ddd;
-}
-.footer__note {
-    margin-top: 40px;
-    font-size: 14px;
+.player__audio {
+    width: 100%;
+    height: 100%;
 }
