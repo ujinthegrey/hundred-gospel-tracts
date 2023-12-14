@@ -102,14 +102,23 @@ meter {
     all: revert;
 }
 
+/* -------------------ROOT----------------- */
+:root {
+    --body-bg-color: #222;
+    --footer-bg-color: #111;
+    --text-color: #bba;
+    --title-color: #bb8;
+    --title-fz: 32px;
+    --button-size: 60px;
+}
+
 /* --------------------BODY----------------- */
 body {
-    background-color: #222;
-    /* font-family: 'Bitter', serif; */
+    background-color: var(--body-bg-color);
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     line-height: 200%;
-    color:#bba;
+    color:var(--text-color);
 }
 
 /* --------------------GRID----------------- */
@@ -118,7 +127,7 @@ body {
     grid-template-columns: [full-start] 10px 1fr [content-start] minmax(300px, 900px) [content-end]  1fr 10px [full-end];
 }
 .grid > * {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .grid-content {
     grid-column: content;
@@ -129,25 +138,22 @@ body {
 
 /* -----------------BANNER------------------ */
 .banner {
-    margin: 0;          /* compensate row-gap: 20px in .content-grid */
+    margin: 0;
     height: 300px;
     background-color: #ccc;
-    background-image: url('./img/banner-5.png');
+    background-image: url('./img/banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 70;
 }
-/* .banner img {
-    display: block;
-    max-width: 100%;
-} */
 
 /* ----------------TITLE-------------------- */
 .title {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
-    color: #bb8;
+    color: var(--title-color);
     letter-spacing: 4px;
 }
 @media (max-width: 600px) {
@@ -168,51 +174,136 @@ body {
     text-align: center;
     font-weight: 700;
     font-style: italic;
-    color: #bb8;
+    color: var(--title-color);
     letter-spacing: 4px;
+    font-size: var(--title-fz);
+    line-height: 200%;
 }
 .about__text {
+} 
+
+/* ------------TRACT-AND-ABOUT-NAV---------- */
+.tract__nav {
+}
+.tract-nav__title {
+}
+.tract-nav__list {
+    display: grid;
+    grid-template-columns: 1fr [text-start] var(--button-size) [text-end audio-start] var(--button-size) [audio-end] 1fr;
+    column-gap: 10px;
+}
+.tract-nav__item {
+}
+.item-text {
+    grid-column: text;
+}
+.item-audio {
+    grid-column: audio;
+}
+
+/* --------------BUTTONS------------- */
+.btn {
+    cursor: pointer;;
+    opacity: .8;
+    transition: opacity .3s;
+    height: var(--button-size);
+    width: var(--button-size);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn-text {
+    background-image: url(./img/sheet-100.svg);
+}
+.btn-audio {
+    background-image: url(./img/play-100.svg);
+}
+.link {
+    cursor: pointer;;
+    opacity: .8;
+    transition: opacity .3s;
+}
+.link:hover {
+    opacity: 1;
+}
+.hide-title {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    z-index: -1000;
 }
 
 /* ------------------TRACT-------------------- */
 .tract {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.tract > * {
+    grid-column: span 2;
 }
 .tract__number {
+    grid-column: span 1;
 }
 .tract__bible {
+    grid-column: span 1;
+    text-align: right;
 }
 .tract__title {
     text-align: center;
     font-weight: 700;
     font-style: italic;
-    color: #bb8;
+    color: var(--title-color);
     letter-spacing: 4px;
+    font-size: var(--title-fz);
+    line-height: 200%;
 }
 .tract__text {
 }
 .tract__author {
+    text-align: center;
 }
 .tract__city {
+    text-align: center;
 }
 .tract__date {
+    text-align: center;
 }
 
 /* ------------------FOOTER------------------- */
 .footer {
-    background-color: #111;
+    background-color: var(--footer-bg-color);
     padding-bottom: 200px;
+    text-align: center;
+}
+.footer__nav {
+}
+.footer-nav__title {
+    color: var(--title-color);
+}
+.footer-nav__list {
+    display: grid;
+}
+.footer-nav__item {
+}
+.footer-nav__link {
+}
+.footer__copy {
 }
 
 /* -----------------PLAYER------------------ */
 .player {
     margin: 0;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     height: 110px;
     width: 100%;
     overflow: hidden;
     background-color: #111;
+    z-index: 60;
 }
 .player__title {
     margin: 0;
