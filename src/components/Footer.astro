@@ -1,0 +1,9 @@
+---
+import FooterLinks from "./FooterLinks.astro"
+
+const currentYear: number = new Date().getFullYear()
+---
+<footer>
+    <FooterLinks />
+    <p>&copy; {currentYear} Eugene Koshelev</p>
+</footer>
