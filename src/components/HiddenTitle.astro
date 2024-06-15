@@ -1,0 +1,17 @@
+---
+/* It is a good practice to have a title for every navigation.
+Even if it will be hodden, search robot will grab a better structure of our page. */
+interface Props {
+    title: string
+}
+const {title} = Astro.props
+---
+<h3>{title}</h3>
+<style>
+    h3 {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -1000;
+    }
+</style>

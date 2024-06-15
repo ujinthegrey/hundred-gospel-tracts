@@ -1,10 +1,10 @@
 ---
-import FooterLinks from "./FooterLinks.astro"
+import FooterNavigation from "./FooterNavigation.astro"
 import Copy from "./Copy.astro"
 ---
 <footer>
     <div class="_container">
-        <FooterLinks />
+        <FooterNavigation />
         <Copy />
     </div>
 </footer>
@@ -12,5 +12,6 @@ import Copy from "./Copy.astro"
     footer {
         background-color: var(--bg-header-footer);
         color: var(--text-header-footer);
+        padding: 4rem .5rem 8rem;
     }
 </style>

@@ -1,22 +1,29 @@
 ---
 import BaseLayout from "./BaseLayout.astro"
 
-/* пока что интерфейс ломает работу страницы
-interface IFroonmatter {
+interface Frops {
   title: string
   description?: string
 
-} */
+}
 const { frontmatter } = Astro.props
-
+const tags = frontmatter.tags
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <div>audioplayer</div>
-    <slot />
-    <div>
+    <div class="_tract-grid">
+      <div>audioplayer</div>
+      <slot />
+      <div>
         <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
-        <p></p>
-
-    </div>    
+        <p>Теги: {tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}</p>
+      </div>    
+    </div>
 </BaseLayout>
+<style>
+  ._tract-grid {
+    margin-block: 1rem;
+    display: grid;
+    gap: 2rem;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 //в дальнейшем заменить title на иконки, написать отдельный интерфейс и избавиться от файла LinkInterface.ts
+import HiddenTitle from "./HiddenTitle.astro"
 import type { ILink } from "./LinkInterface"
 
 const links: ILink[] = [
@@ -23,7 +24,7 @@ const links: ILink[] = [
 ---
 <header>
     <nav class='_container'>
-        <h6 class="_hidden-title">Вспомогательная навигация</h6>
+        <HiddenTitle title='Вспомогательная навигация' />
         <ul>
             {links.map((link) => <li><a href={link.href} target={link.target} class='_link'>{link.title}</a></li>)}
         </ul>

@@ -40,7 +40,7 @@ body {
     color: var(--dark)
 }
 
-/* ------ CONTAINER ------ */
+/* ------ CONTAINERS ------ */
 ._container {
     /* Since we are building a reading and listening app
     it is a good practice to make a line width equals to 80 characters
