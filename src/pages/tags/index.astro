@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+const pageTitle = "Облако Тегов"
+
+const allTracts = await Astro.glob('../tracts/*.md')
+const uniqueTags = [...new Set(allTracts.map((tract) => tract.frontmatter.tags).flat())]
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div class="_grid">
+        {uniqueTags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
+    </div>
+</BaseLayout>

@@ -1,9 +1,16 @@
 ---
 import FooterLinks from "./FooterLinks.astro"
-
-const currentYear: number = new Date().getFullYear()
+import Copy from "./Copy.astro"
 ---
 <footer>
-    <FooterLinks />
-    <p>&copy; {currentYear} Eugene Koshelev</p>
+    <div class="_container">
+        <FooterLinks />
+        <Copy />
+    </div>
 </footer>
+<style>
+    footer {
+        background-color: var(--bg-header-footer);
+        color: var(--text-header-footer);
+    }
+</style>

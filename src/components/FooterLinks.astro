@@ -26,9 +26,19 @@ const links: ILink[] = [
 ---
 
 <nav>
-    <h6 class="hidden-title">Вспомогательная навигация</h6>
+    <h6 class="_hidden-title">Полезные ссылки</h6>
     <ul>
-        {links.map((link) => <li><a href={link.href} target={link.target}>{link.title}</a></li>)}
+        {links.map((link) => <li><a href={link.href} target={link.target} class="_link">{link.title}</a></li>)}
     </ul>
 </nav>
+<style>
+    nav {
+        margin-top: 2rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
 

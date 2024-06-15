@@ -1,4 +1,70 @@
+/* ------ colors ------ */
+:root{
+    
+  /* ------- COLORS ------ */
+    /* ------ LIGHT-MODE COLORS------ */
+    &, &.light-mode {
+        --bg-body: #eee;
+        --bg-header-footer: #222;
+        --bg-accent-1: #8e8;
+        --bg-accent-2: #ccb;
+        
+        --text-body: #222;
+        --text-header-footer: #ddd;
+        --text-body-accent: #282;
+        --text-header-footer-accent: #a8b;
+    }
+    
+    /* ------ DARK-MODE COLORS ------ */
+    &.dark-mode {
+        --dark: #222;
+        --semidark: #eee;
+        --light: #ddd;
+        --semilight: #ccc;
+        --green: #9b9;
+        --blue: #a8b;
+    }
+
+    /* ------ sizes ------ */
+    --header-height: 4rem;
+    --banner-height: 70vmin;
+    --player-height: 3rem;
+
+}
+
 /* ------ font ------ */
 body {
     font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--bg-body);
+    color: var(--dark)
+}
+
+/* ------ CONTAINER ------ */
+._container {
+    /* Since we are building a reading and listening app
+    it is a good practice to make a line width equals to 80 characters
+    for a better reading experiance */
+    max-width: 80ch;
+    margin: 0 auto;
+}
+._grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ------ HODDEN-TITLE ------ */
+/* It is a good practice to have a title for every navigation.
+Even if it will be hodden, search robot will grab a better structure of our page. */
+._hidden-title {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+/* ------ LINKS ------ */
+._link:hover {
+    color: var(--text-header-footer-accent)
 }

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import TractItem from '../../components/TractItem.astro'
+
+export async function getStaticPaths() {
+  const allTracts = await Astro.glob('../tracts/*.md')
+  const uniqueTags = [...new Set(allTracts.map((tract) => tract.frontmatter.tags).flat())]
+
+  return uniqueTags.map((tag) => {
+    const filteredTracts = allTracts.filter((tract) => tract.frontmatter.tags.includes(tag))
+    return {
+      params: { tag },
+      props: { tracts: filteredTracts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { tracts } = Astro.props;
+---
+<BaseLayout pageTitle={`трактаты по тегу ${tag}`}>
+  <ul class="_grid">
+    {tracts.map((tract) => <TractItem tract={tract} title={tract.frontmatter.title}/>)}
+  </ul>  
+</BaseLayout>

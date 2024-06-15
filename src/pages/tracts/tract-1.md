@@ -1,13 +1,15 @@
 ---
-layout: ../../layouts/MarkdowmTractLayout.astro
-title: 'Взгляни на вознесённого Христа'
-pubDate: 2024-06-12
+author: 'Евгений Кошелев'
+city: 'Samara'
 description: 'Евангельский трактат на Иоанна 3:14-15'
-author: 'Нвгений Кошелев'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'banner'
-tags: ["Иоанна", "Числа", "Медный Змей"]
+    url: '../../img/tract-1.jpg'
+    alt: 'Обложка Трактата'
+link: '/tracts/tract-1'
+layout: ../../layouts/MarkdowmTractLayout.astro
+pubDate: 2024-06-12
+tags: ["Иоанна", "Числа", "Медный Змей", 'english']
+title: 'Взгляни на вознесённого Христа'
 ---
 
 Содержание трактата...

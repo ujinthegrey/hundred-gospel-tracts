@@ -1,0 +1,16 @@
+---
+const { tract } = Astro.props
+---
+<article>
+    <a href={tract.frontmatter.link}><img src={tract.frontmatter.image.url} alt={tract.frontmatter.image.alt}/></a>
+    <p>{tract.frontmatter.title}</p>
+    <p>{tract.frontmatter.tags.join(', ')}</p>
+</article>
+<style>
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
