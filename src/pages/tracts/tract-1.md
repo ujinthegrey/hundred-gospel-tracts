@@ -8,7 +8,7 @@ image:
 link: '/tracts/tract-1'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-06-12
-tags: ["Иоанна", "Числа", "Медный Змей", 'english']
+tags: ["иоанна", "числа", "медныйзмей", 'english', 'кошелев']
 title: 'Взгляни на вознесённого Христа'
 ---
 

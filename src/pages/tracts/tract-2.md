@@ -8,7 +8,7 @@ image:
 link: '/tracts/tract-2'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
-tags: ["Откровение", "Остров Патмос"]
+tags: ["откровение", "островпатмос", 'коломойцев']
 title: 'Драгоценный Христос'
 ---
 
