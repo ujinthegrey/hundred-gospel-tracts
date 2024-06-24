@@ -1,0 +1,49 @@
+---
+
+---
+<button class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+<style>
+    .burger-icon {
+        grid-column: burger;
+        height: 60px;
+        width: 60px;
+        position: relative;
+        cursor: pointer;
+    }
+    .burger-icon span {
+        height: 2px;
+        width: 50%;
+        background-color: var(--text-header-footer);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+/*     .burger-icon:hover span,
+    .burger-icon:focus span {
+        background-color: var(--text-header-footer-accent);
+    } */
+    .burger-icon span:nth-child(1) {
+        top: 35%;
+    }
+    .burger-icon span:nth-child(3) {
+        top: 65%;
+    }
+    .burger-icon.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .burger-icon.active span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    .burger-icon.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+</style>

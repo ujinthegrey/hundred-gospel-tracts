@@ -1,38 +1,18 @@
 ---
-//в дальнейшем заменить title на иконки, написать отдельный интерфейс и избавиться от файла LinkInterface.ts
-import HiddenTitle from "./HiddenTitle.astro"
-import ThemeIcon from './ThemeIcon.astro';
-import type { ILink } from "./LinkInterface"
-
-const links: ILink[] = [
-    {
-        'href': '/',
-        'title': 'На главную',
-        'target': '_self'
-    },
-    {
-        'href': '/about',
-        'title': 'О проекте',
-        'target': '_self'
-    },
-    {
-        'href': '/tags',
-        'title': 'Теги',
-        'target': '_self'
-    },
-]
-
+import Logo from "./Logo.astro"
+import BurgerIcon from "./BurgerIcon.astro"
+import BurgerMenu from "./BurgerMenu.astro"
 ---
 <header>
-    <nav class='_container'>
-        <HiddenTitle title='Вспомогательная навигация' />
-        <ul>
-            {links.map((link) => <li><a href={link.href} target={link.target} class='_link'>{link.title}</a></li>)}
-        </ul>
-        <ThemeIcon />
-    </nav>
+    <div class='_container header-container'>
+        <Logo href="/" logo="Сто Евангельских Трактатов"/>
+        <BurgerIcon />
+        <BurgerMenu />
+    </div>
 
-    
+    <script>
+        import '../scripts/burger'
+    </script>
 </header>
 <style>
     header {
@@ -40,20 +20,15 @@ const links: ILink[] = [
         top: 0;
         left: 0;
         right: 0;
+        min-height: var(--header-height);
         background-color: var(--bg-header-footer);
         color: var(--text-header-footer);
         z-index: 70;
     }
-
-    ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
+    .header-container {
+        min-height: var(--header-height);
+        display: grid;
+        grid-template-columns: 60px 1fr [logo-start] auto [logo-end] 1fr [burger-start] 60px [burger-end];
+        align-items: center;        
     }
-    a {
-        line-height: var(--header-height);
-    }
-
 </style>

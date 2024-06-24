@@ -1,15 +1,15 @@
 ---
-author: 'Алексей Коломийцев'
-city: 'Sacramento'
-description: 'Евангельский трактат на Откровение 1'
+author: 'Мартин Ллойд-Джонс'
+city: 'London'
+description: 'Евангельский трактат на Римлянам 3'
 image:
-    url: '../../img/tract-2.jpg'
+    url: '../../img/tract-7.jpg'
     alt: 'Обложка Трактата'
-link: '/tracts/tract-3'
+link: '/tracts/tract-7'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
-tags: ["откровение", "островпатмос", 'коломойцев']
-title: 'Трактат 7'
+tags: ["римлянам", "правдабожья", 'ллойд-джонс']
+title: 'Ныне открывается правда Божия'
 ---
 
 Содержание трактата...

@@ -1,14 +1,14 @@
 ---
-author: 'Алексей Коломийцев'
-city: 'Sacramento'
-description: 'Евангельский трактат на Откровение 1'
+author: 'Джон МакАртур'
+city: 'Los Angeles'
+description: 'Евангельский трактат на Луки 15'
 image:
-    url: '../../img/tract-2.jpg'
+    url: '../../img/tract-3.jpg'
     alt: 'Обложка Трактата'
 link: '/tracts/tract-3'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
-tags: ["откровение", "островпатмос", 'коломойцев']
+tags: ["луки", "блудныйсын", 'притча' ,  'макартур']
 title: 'Трактат 3'
 ---
 

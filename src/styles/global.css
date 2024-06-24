@@ -31,6 +31,11 @@
     --player-height: 3rem;
 
 }
+/* ------ DARK-MODE ------ */
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+}
 
 /* ------ font ------ */
 body {
@@ -65,6 +70,12 @@ Even if it will be hodden, search robot will grab a better structure of our page
 }
 
 /* ------ LINKS ------ */
-._link:hover {
+._link {
+    cursor: pointer;
+    color: var(--text-header-footer);
+    transition: 0.3s ease;
+}
+._link:hover,
+._link:focus {
     color: var(--text-header-footer-accent)
 }
