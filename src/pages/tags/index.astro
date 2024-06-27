@@ -1,9 +1,11 @@
 ---
+import { getCollection } from 'astro:content'
+
 import BaseLayout from '../../layouts/BaseLayout.astro'
 const pageTitle = "Облако Тегов"
 
-const allTracts = await Astro.glob('../tracts/*.md')
-const uniqueTags = [...new Set(allTracts.map((tract) => tract.frontmatter.tags).flat())].sort()
+const allTracts = await getCollection('tract')
+const uniqueTags = [...new Set(allTracts.map((tract) => tract.data.tags).flat())].sort()
 ---
 <BaseLayout pageTitle={pageTitle}>
     <div class="_grid">

@@ -1,7 +1,10 @@
 ---
+import { getCollection } from "astro:content"
+
 import BaseLayout from "../layouts/BaseLayout.astro"
 import TractItem from "../components/TractItem.astro"
-import Greeting from "../components/Greeting"
+
+const pageTitle: string = 'Сто Евангельских Трактатов'
 
 /* interface ITract {
 	layout: string
@@ -12,12 +15,13 @@ import Greeting from "../components/Greeting"
 	image: {url: string, alt: string}
 	tags: string[]
 } */
-const allTracts = await Astro.glob('./tracts/*.md')
-const pageTitle: string = 'Сто Евангельских Трактатов'
+//const allTracts = await Astro.glob('./tracts/*.md')
+
+const allTracts = await getCollection('tract')
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<div class="_container _grid">
 		{allTracts.map((tract) => <TractItem tract={tract} />)}
-	</div>
+	</>
 </BaseLayout>

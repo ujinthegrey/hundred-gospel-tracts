@@ -2,12 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import TractItem from '../../components/TractItem.astro'
 
+import { getCollection } from 'astro:content'
+
 export async function getStaticPaths() {
-  const allTracts = await Astro.glob('../tracts/*.md')
-  const uniqueTags = [...new Set(allTracts.map((tract) => tract.frontmatter.tags).flat())]
+  const allTracts = await getCollection('tract')
+  const uniqueTags = [...new Set(allTracts.map((tract) => tract.data.tags).flat())]
 
   return uniqueTags.map((tag) => {
-    const filteredTracts = allTracts.filter((tract) => tract.frontmatter.tags.includes(tag))
+    const filteredTracts = allTracts.filter((tract) => tract.data.tags.includes(tag))
     return {
       params: { tag },
       props: { tracts: filteredTracts },
@@ -20,6 +22,6 @@ const { tracts } = Astro.props;
 ---
 <BaseLayout pageTitle={`трактаты по тегу ${tag}`}>
   <ul class="_grid">
-    {tracts.map((tract) => <TractItem tract={tract} title={tract.frontmatter.title}/>)}
+    {tracts.map((tract) => <TractItem tract={tract} title={tract.data.title}/>)}
   </ul>  
 </BaseLayout>

@@ -16,7 +16,7 @@ const tags = frontmatter.tags
       <slot />
       <div>
         <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
-        <p>Теги: {tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}</p>
+        <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="tag-link">{tag}</a>))}</p>
       </div>    
     </div>
 </BaseLayout>
@@ -25,5 +25,8 @@ const tags = frontmatter.tags
     margin-block: 1rem;
     display: grid;
     gap: 2rem;
+  }
+  .tag-link {
+    margin-right: .5rem;
   }
 </style>
