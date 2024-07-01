@@ -8,7 +8,9 @@ const {href, logo} = Astro.props
 <a href={href} class="logo _link">{logo}</a>
 <style>
     .logo {
-        grid-column: logo;
+        grid-column: logo;        
         text-align: center;
+        text-transform: lowercase;
+        letter-spacing: .2rem;
     }
 </style>

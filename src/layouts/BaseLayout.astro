@@ -22,13 +22,13 @@ const darkClass: TypeDarkClass = 'light-mode'
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
-		<Header />
-		<div class="_container">
+	<body class="_wrapper">
+		<Header/>
+		<div class="_main-content _container">
 			<Title title={pageTitle} />
 			<slot />
 		</div>
-		<Footer/>
+		<Footer />
 	</body>
 </html>
 <style>

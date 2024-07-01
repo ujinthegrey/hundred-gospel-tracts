@@ -2,7 +2,7 @@
 const { tract } = Astro.props
 ---
 <article>
-    <a href={`/tracts/${tract.slug}`}><img src={tract.data.image.url} alt={tract.data.image.alt}/></a>
+    <a class="img-link" href={`/tracts/${tract.slug}`}><img src={tract.data.image.url} alt={tract.data.image.alt}/></a>
     <p>{tract.data.title}</p>
     <p>{tract.data.author}</p>
     <p>{tract.data.pubDate.toISOString().slice(0,10)}</p>
@@ -15,5 +15,12 @@ const { tract } = Astro.props
         align-items: center;
         justify-content: space-between;
         text-align: center;
+    }
+    .img-link {
+        opacity: .8;
+        transition: opacity .3s ease;
+    }
+    .img-link:hover {
+        opacity: 1;
     }
 </style>

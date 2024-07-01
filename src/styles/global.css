@@ -45,15 +45,25 @@ body {
     color: var(--dark)
 }
 
+/* ------ WRAPPER  ------ */
+._wrapper {
+    width: 100dvw;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._main-content {
+    flex: 1;
+}
+
 /* ------ CONTAINERS ------ */
 ._container {
-    /* Since we are building a reading and listening app
-    it is a good practice to make a line width equals to 80 characters
-    for a better reading experiance */
     max-width: 80ch;
     margin: 0 auto;
+    padding: 0 10px;
 }
-._grid {
+._grid-comtainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;

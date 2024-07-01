@@ -21,7 +21,7 @@ const allTracts = await getCollection('tract')
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<div class="_container _grid">
+	<div class="_grid-comtainer">
 		{allTracts.map((tract) => <TractItem tract={tract} />)}
 	</>
 </BaseLayout>
