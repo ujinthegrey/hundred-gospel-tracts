@@ -1,45 +1,54 @@
 ---
 
 ---
-<button class="burger-icon">
+<button id="burger-icon">
     <span></span>
     <span></span>
     <span></span>
+    <script>
+        import '../scripts/burger'
+    </script>
 </button>
 <style>
-    .burger-icon {
-        grid-column: burger;
-        height: 60px;
-        width: 60px;
+    button {
+        height: 30px;
+        width: 30px;
         position: relative;
         cursor: pointer;
+        transition: translate .3s ease;
     }
-    .burger-icon span {
-        height: 2px;
-        width: 50%;
-        background-color: var(--text-header-footer);
+    button:hover {
+        translate: -6px;
+    }
+    button span {
+        height: 6px;
+        width: 100%;
+        background-color: var(--my-green);
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         transition: .3s ease;
     }
-    .burger-icon span:nth-child(1) {
-        top: 35%;
+    button span:nth-child(1) {
+        top: 10%;
     }
-    .burger-icon span:nth-child(3) {
-        top: 65%;
+    button span:nth-child(3) {
+        top: 90%;
     }
-    .burger-icon.active span:nth-child(1) {
+    button.active span {
+        width: 120%;
+        background-color: var(--my-red);
+    }
+    button.active span:nth-child(1) {
         top: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(135deg);
     }
-    .burger-icon.active span:nth-child(2) {
+    button.active span:nth-child(2) {
         opacity: 0;
-        transform: rotate(90deg);
     }
-    .burger-icon.active span:nth-child(3) {
+    button.active span:nth-child(3) {
         top: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-135deg);
     }
 </style>

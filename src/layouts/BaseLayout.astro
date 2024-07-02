@@ -11,20 +11,17 @@ interface Props {
 }
 const { pageTitle } = Astro.props
 
-type TypeDarkClass = 'dark-mode' | 'light-mode'
-const darkClass: TypeDarkClass = 'light-mode'
+const theme = 'system'
 ---
-<html lang="ru-RU">
+<html lang="ru-RU" data-theme={theme}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="../styles/zeroing.css">
-		<link rel="stylesheet" href="../styles/global.css">
-		<title>{pageTitle}</title>
+	 	<title>{pageTitle}</title>
 	</head>
-	<body class="_wrapper">
+	<body id='body' class='_wrapper'>
 		<Header/>
 		<div class="_main-content _container">
 			<Title title={pageTitle} />

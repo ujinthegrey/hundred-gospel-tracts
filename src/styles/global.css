@@ -1,48 +1,111 @@
-/* ------ colors ------ */
 :root{
+    /* ------ COMMON COLORS ------ */
+    --my-green: #ccb;
+    --my-red: #f44;
     
-  /* ------- COLORS ------ */
     /* ------ LIGHT-MODE COLORS------ */
-    &, &.light-mode {
-        --bg-body: #eee;
-        --bg-header-footer: #222;
-        --bg-accent-1: #8e8;
-        --bg-accent-2: #ccb;
-        
-        --text-body: #222;
-        --text-header-footer: #ddd;
-        --text-body-accent: #282;
-        --text-header-footer-accent: #a8b;
-    }
+    --lm-bg-body: #eee;
+    --lm-bg-body-accent: #ccb;
+    --lm-bg-header-footer: rgba(51, 51, 51, .9);
+    --lm-bg-header-footer-accent: rgba(0, 0, 0, .9);
+    --lm-text-body: #000;
+    --lm-text-body-accent: #f44;
+    --lm-text-header-footer: #ddd;
+    --lm-text-header-footer-accent: #fff;
+    --lm-link-body: #363;
+    --lm-link-body-hover: #633;
+    --lm-link-header-footer: #ccb;
+    --lm-link-header-footer-hover: #f44;
     
     /* ------ DARK-MODE COLORS ------ */
-    &.dark-mode {
-        --dark: #222;
-        --semidark: #eee;
-        --light: #ddd;
-        --semilight: #ccc;
-        --green: #9b9;
-        --blue: #a8b;
+    --dm-bg-body: #222;
+    --dm-bg-body-accent: #f44;
+    --dm-bg-header-footer: rgba(0, 0, 0, .9);
+    --dm-bg-header-footer-accent: #f44;
+    --dm-text-body: #ddd;
+    --dm-text-body-accent: #f88;
+    --dm-text-header-footer: #ddd;
+    --dm-text-header-footer-accent: #ddd;
+    --dm-link-body: #8b8;
+    --dm-link-body-hover: #b88;
+    --dm-link-header-footer: #ccb;
+    --dm-link-header-footer-hover: #f44;
+
+    --bg-body: var(--lm-bg-body);
+    --bg-body-accent: var(--lm-bg-body-accent);
+    --bg-header-footer: var(--lm-bg-header-footer);
+    --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
+    --text-body: var(--lm-text-body);
+    --text-body-accent: var(--lm-text-body-accent);
+    --text-header-footer: var(--lm-text-header-footer);
+    --text-header-footer-accent: var(--lm-text-header-footer-accent);
+    --link-body: var(--lm-link-body);
+    --link-body-hover: var(--lm-link-body-hover);
+    --link-header-footer: var(--lm-link-header-footer);
+    --link-header-footer-hover: var(--lm-link-header-footer-hover);
+    color-scheme: light;
+
+    /* ------ SIZES ------ */
+    --header-height: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body: var(--dm-bg-body);
+        --bg-body-accent: var(--dm-bg-body-accent);
+        --bg-header-footer: var(--dm-bg-header-footer);
+        --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
+        --text-body: var(--dm-text-body);
+        --text-body-accent: var(--dm-text-body-accent);
+        --text-header-footer: var(--dm-text-header-footer);
+        --text-header-footer-accent: var(--dm-text-header-footer-accent);
+        --link-body: var(--dm-link-body);
+        --link-body-hover: var(--dm-link-body-hover);
+        --link-header-footer: var(--dm-link-header-footer);
+        --link-header-footer-hover: var(--dm-link-header-footer-hover);
+        color-scheme: dark;
     }
-
-    /* ------ sizes ------ */
-    --header-height: 4rem;
-    --banner-height: 70vmin;
-    --player-height: 3rem;
-
 }
-/* ------ DARK-MODE ------ */
-html.dark {
-    background-color: #0d0950;
-    color: #fff;
+
+[data-theme="dark"] {
+    --bg-body: var(--dm-bg-body);
+    --bg-body-accent: var(--dm-bg-body-accent);
+    --bg-header-footer: var(--dm-bg-header-footer);
+    --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
+    --text-body: var(--dm-text-body);
+    --text-body-accent: var(--dm-text-body-accent);
+    --text-header-footer: var(--dm-text-header-footer);
+    --text-header-footer-accent: var(--dm-text-header-footer-accent);
+    --link-body: var(--dm-link-body);
+    --link-body-hover: var(--dm-link-body-hover);
+    --link-header-footer: var(--dm-link-header-footer);
+    --link-header-footer-hover: var(--dm-link-header-footer-hover);
+    color-scheme: dark;
 }
+
+[data-theme="light"] {
+    --bg-body: var(--lm-bg-body);
+    --bg-body-accent: var(--lm-bg-body-accent);
+    --bg-header-footer: var(--lm-bg-header-footer);
+    --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
+    --text-body: var(--lm-text-body);
+    --text-body-accent: var(--lm-text-body-accent);
+    --text-header-footer: var(--lm-text-header-footer);
+    --text-header-footer-accent: var(--lm-text-header-footer-accent);
+    --link-body: var(--lm-link-body);
+    --link-body-hover: var(--lm-link-body-hover);
+    --link-header-footer: var(--lm-link-header-footer);
+    --link-header-footer-hover: var(--lm-link-header-footer-hover);
+    color-scheme: light;
+}
+
 
 /* ------ font ------ */
 body {
     font-family: system-ui, sans-serif;
     font-size: 1.5rem;
     background-color: var(--bg-body);
-    color: var(--dark)
+    color: var(--text-body)
 }
 
 /* ------ WRAPPER  ------ */
@@ -79,13 +142,28 @@ Even if it will be hodden, search robot will grab a better structure of our page
     z-index: -1000;
 }
 
-/* ------ LINKS ------ */
-._link {
+/* ------ HEADER FOOTER LINKS ------ */
+._header-footer-link {
     cursor: pointer;
-    color: var(--text-header-footer);
-    transition: 0.3s ease;
+    color: var(--link-header-footer);
+    font-weight: 600;
+    line-height: 3rem;
+    transition: color .3s ease;
 }
-._link:hover,
-._link:focus {
-    color: var(--text-header-footer-accent)
+._header-footer-link:hover,
+._header-footer-link:focus {
+    color: var(--link-header-footer-hover);
+    text-shadow: 0px 0px 15px var(--bg-header-footer-accent);
+}
+
+/* ------ BODY LINKS ------ */
+._body-link {
+    cursor: pointer;
+    color: var(--link-body);
+    font-weight: 600;
+    transition: color .3s ease;
+}
+._body-link:hover,
+._body-link:focus {
+    color: var(--link-body-hover);
 }

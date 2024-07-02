@@ -1,4 +1,4 @@
-document.querySelector('.burger-icon').addEventListener('click', () => {
-    document.querySelector('.burger-icon').classList.toggle('active')
-    document.querySelector('.burger-menu').classList.toggle('open')
+document.getElementById('burger-icon').addEventListener('click', () => {
+    document.getElementById('burger-icon').classList.toggle('active')
+    document.getElementById('burger-menu').classList.toggle('open')
 })

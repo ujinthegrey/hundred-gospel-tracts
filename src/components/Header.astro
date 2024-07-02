@@ -1,11 +1,12 @@
 ---
-import Logo from "./Logo.astro"
 import BurgerIcon from "./BurgerIcon.astro"
 import BurgerMenu from "./BurgerMenu.astro"
+import Logo from "./Logo.astro"
+
 ---
 <header>
     <div class='_container header-container'>
-        <Logo href="/" logo="Евангельские Трактаты" />
+        <Logo />
         <BurgerIcon />
         <BurgerMenu />
     </div>
@@ -19,17 +20,14 @@ import BurgerMenu from "./BurgerMenu.astro"
         top: 0;
         left: 0;
         right: 0;
-        min-height: var(--header-height);
         background-color: var(--bg-header-footer);
-        /* background-color: rgba(0, 0, 0, .5);
-        backdrop-filter: blur(10px); */
+        backdrop-filter: blur(15px);
         color: var(--text-header-footer);
         z-index: 70;
     }
     .header-container {
-        min-height: var(--header-height);
-        display: grid;
-        grid-template-columns: 60px 1fr [logo-start] auto [logo-end] 1fr [burger-start] 60px [burger-end];
+        display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 </style>

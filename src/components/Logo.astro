@@ -1,16 +1,21 @@
 ---
-interface Props {
-    logo: string
-    href: string
-}
-const {href, logo} = Astro.props
+
 ---
-<a href={href} class="logo _link">{logo}</a>
+<a href="/">
+    <img src="../../img/logo.svg"  alt='logo' height="30px" class="logo"/>
+</a>
 <style>
-    .logo {
-        grid-column: logo;        
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        text-transform: lowercase;
-        letter-spacing: .2rem;
+        transition: translate .3s ease;
+    }
+    a:hover {
+        translate: 6px;
+    }
+    img {
+        margin: 10px;
     }
 </style>

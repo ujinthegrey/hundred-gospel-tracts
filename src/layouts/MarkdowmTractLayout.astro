@@ -1,4 +1,5 @@
 ---
+import Audioplayer from "../components/Audioplayer.astro"
 import BaseLayout from "./BaseLayout.astro"
 
 interface Frops {
@@ -12,11 +13,11 @@ const tags = frontmatter.tags
 
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="_tract-grid">
-      <div>audioplayer</div>
+      <Audioplayer />
       <slot />
       <div>
         <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
-        <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="tag-link">{tag}</a>))}</p>
+        <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a>))}</p>
       </div>    
     </div>
 </BaseLayout>

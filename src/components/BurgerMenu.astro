@@ -1,34 +1,39 @@
 ---
-
+import ToggleTheme from "./ToggleTheme.astro"
 ---
-<nav class="burger-menu">
-    <h3 class='_hidden-title'>Вспомогательная навигация</h3>
-    <ul class="burger-list">
-        <li><a href='/about' class="_link burger-link">о проекте</a></li>
-        <li><a href='/tags' class="_link burger-link">теги</a></li>
-    </ul>
+<nav id="burger-menu">
+    <div class="_container">
+        <h3 class='_hidden-title'>Вспомогательная навигация</h3>
+        <ul>
+            <li><ToggleTheme /></li>
+            <li><a href='/about' class="_header-footer-link">о проекте</a></li>
+            <li><a href='/tracts/tract-1' class="_header-footer-link">трактат #1</a></li>
+            <li><a href='/tags' class="_header-footer-link">теги</a></li>
+        </ul>
+    </div>
 </nav>
 <style>
-    .burger-menu {
-        background-color: var(--bg-header-footer);
+    nav {
+        visibility: hidden;
         position: absolute;
         top: var(--header-height);
         left: 200vw;
-        right: 0;
-        transition: .4s ease;
+        right: -200vw;
+        transition: .3s ease;
+        background-color: var(--bg-header-footer);
+        backdrop-filter: blur(15px);
+        z-index: 60;
     }
-    .burger-menu.open {
+    nav.open {
+        visibility: visible;
         left: 0;
         right: 0;
     }
-    .burger-list {
-        display: grid;
-        grid-template-columns: 1fr;
+    ul {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         margin-bottom: 2rem;
-    }
-    .burger-link {
-        line-height: 3rem;
     }
 </style>

@@ -3,8 +3,8 @@ const { tract } = Astro.props
 ---
 <article>
     <a class="img-link" href={`/tracts/${tract.slug}`}><img src={tract.data.image.url} alt={tract.data.image.alt}/></a>
-    <p>{tract.data.title}</p>
-    <p>{tract.data.author}</p>
+    <p class="title">{tract.data.title}</p>
+    <p class="author">{tract.data.author}</p>
     <p>{tract.data.pubDate.toISOString().slice(0,10)}</p>
     <!-- <p>{tract.data.tags.join(', ')}</p> -->
 </article>
@@ -16,11 +16,17 @@ const { tract } = Astro.props
         justify-content: space-between;
         text-align: center;
     }
+    .title {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .author {
+        color: var(--text-body-accent)
+    }
     .img-link {
-        opacity: .8;
-        transition: opacity .3s ease;
+        transition: translate .3s ease;
     }
     .img-link:hover {
-        opacity: 1;
+        translate: 6px;
     }
 </style>
