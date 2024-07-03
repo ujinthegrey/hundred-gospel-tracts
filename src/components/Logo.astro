@@ -2,20 +2,129 @@
 
 ---
 <a href="/">
-    <img src="../../img/logo.svg"  alt='logo' height="30px" class="logo"/>
+    <div class="container">
+
+        <!-- 100ET -->
+
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item accent"/>
+        <div class="item accent"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item accent"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item accent"/>
+        <div class="item accent"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item accent"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+        <div class="item accent"/>
+        <div class="item accent"/>
+        <div class="item empty"/>
+        <div class="item empty"/>
+        <div class="item fill"/>
+        <div class="item empty"/>
+
+    </div>
 </a>
 <style>
     a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transition: translate .3s ease;
+        margin-block: 10px;
+        display: block;
+        width: 96px;
+        height: 30px;
     }
-    a:hover {
-        translate: 6px;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(16, 6px);
+        grid-template-rows: repeat(5, 6px);
+        /* transition: transform .3s ease; */
     }
-    img {
-        margin: 10px;
+    .item {
+        height: 6px;
+        width: 6px;
     }
+    .container:hover {
+        transform: rotate(-3deg);
+    }
+    .container:hover > .item {
+        border-radius: 50%;
+        /* transition: border-radius .3s ease; */
+    }
+    .empty {
+        background-color: transparent;
+    }
+    .fill {
+        background-color: var(--my-green);
+    }
+    .accent {
+        background-color: var(--my-red);
+    }
+
 </style>

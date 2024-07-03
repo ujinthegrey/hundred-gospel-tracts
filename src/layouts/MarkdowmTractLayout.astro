@@ -14,16 +14,28 @@ const tags = frontmatter.tags
 <BaseLayout pageTitle={frontmatter.title}>
     <Audioplayer />
     <slot />
-    <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
-    <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a>))}</p>
+    <div class="info">
+      <p>{frontmatter.city},</p>
+      <p><time>{frontmatter.pubDate.slice(0,10)}</time></p>
+      <ul>
+        <h3 class="_hidden-title">Навигация по тегам</h3>
+        <div class="container">
+          {tags.map((tag) => (<li><a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a></li>))}
+        </div>
+      </ul>
+    </div>
 </BaseLayout>
 <style>
-  ._tract-grid {
-    margin-block: 1rem;
-    display: grid;
-    gap: 2rem;
+  .info {
+    margin-block: 2rem;
   }
-  .tag-link {
-    margin-right: .5rem;
+  p {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 </style>

@@ -4,6 +4,7 @@ const tractCollection = defineCollection({
   type: 'content', 
   schema: z.object({
     author: z.string(),
+    bible: z.string(),
     city: z.string(),
     description: z.string(),
     image: z.object({

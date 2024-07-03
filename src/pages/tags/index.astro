@@ -8,9 +8,12 @@ const allTracts = await getCollection('tract')
 const uniqueTags = [...new Set(allTracts.map((tract) => tract.data.tags).flat())].sort()
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <div class="container">
-        {uniqueTags.map((tag) => <div class="item"><a href={`/tags/${tag}`}>{tag}</a></div>)}
-    </div>
+    <ul>
+        <h3 class="_hidden-title">Навигация по тегам</h3>
+        <div class="container">
+            {uniqueTags.map((tag) => <li class="item"><a class="_body-link" href={`/tags/${tag}`}>{tag}</a></li>)}
+        </div>
+    </ul>
 </BaseLayout>
 <style>
     .container {

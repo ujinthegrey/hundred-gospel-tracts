@@ -116,9 +116,8 @@ body {
 
 /* ------ WRAPPER  ------ */
 ._wrapper {
-    width: 100%;
     min-height: 100dvh;
-    /* overflow-x: hidden; */
+    overflow-x: clip;
     display: flex;
     flex-direction: column;
 }
@@ -137,7 +136,9 @@ body {
 ._grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1frt;
     gap: 1rem;
+    padding-block: 2rem;
 }
 
 @media (max-width: 768px) {

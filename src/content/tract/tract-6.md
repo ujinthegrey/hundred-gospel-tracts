@@ -1,5 +1,6 @@
 ---
 author: 'Алексей Коломийцев'
+bible: 'Откровение 1:4-9'
 city: 'Sacramento'
 description: 'Евангельский трактат на Откровение 1'
 image:
@@ -8,7 +9,7 @@ image:
 link: '/tracts/tract-6'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
-tags: ["откровение", "островпатмос", 'коломойцев']
+tags: ["откровение", "островпатмос", 'коломийцев']
 title: 'Трактат 6'
 ---
 

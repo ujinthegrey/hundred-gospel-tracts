@@ -1,17 +1,27 @@
 ---
 const { tract } = Astro.props
 ---
-<article>
-    <a class="img-link" href={`/tracts/${tract.slug}`}>
-        <img src={tract.data.image.url} alt={tract.data.image.alt} width="240px" height="240px"/>
-    </a>
-    <p class="title">{tract.data.title}</p>
-    <p class="author">{tract.data.author}</p>
-    <p class="tags">{tract.data.tags.join(', ')}</p>
-    <p class="data">{tract.data.pubDate.toISOString().slice(0,10)}</p>
-    <p class="views">views</p>
-</article>
+<a class="atricle-link" href={`/tracts/${tract.slug}`}>
+    <article>
+        <img class="_img" src={tract.data.image.url} alt={tract.data.image.alt} />
+        <div class="info">
+            <p class="bible">{tract.data.bible}</p>
+            <p class="title">{tract.data.title}</p>
+            <p class="author">{tract.data.author}</p>
+            <p class="data">{tract.data.pubDate.toISOString().slice(0,10)}</p>
+            <p class="views">views</p>
+        </div>
+    </article>
+</a>
 <style>
+    .atricle-link {
+        display: flex;
+        cursor: pointer;
+        transition: box-shadow .3s ease;
+    }
+    .atricle-link:hover {
+        box-shadow: 0px 0px 10px #fff;
+    }
     article {
         display: flex;
         flex-direction: column;
@@ -20,29 +30,25 @@ const { tract } = Astro.props
         justify-content: space-between;
         text-align: center;
         background-color: var(--bg-body-2);
-        padding: 2rem .5rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem .5rem 2rem;
+    }
+
+    .author,
+    .bible {
+        color: var(--text-body-accent);
+        font-size: 1.2rem;
     }
     .title {
         text-transform: uppercase;
         font-weight: 600;
     }
-    .author {
-        color: var(--text-body-accent)
-    }
     .data,
     .views {
-        display: flex;
-        justify-content: space-between;
         font-size: 1rem;
-    }
-    .tags {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-    .img-link {
-        transition: translate .3s ease;
-    }
-    .img-link:hover {
-        translate: 6px;
     }
 </style>

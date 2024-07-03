@@ -1,5 +1,6 @@
 ---
 author: 'Джон МакАртур'
+bible: 'Луки 15:11-32'
 city: 'Los Angeles'
 description: 'Евангельский трактат на Луки 15'
 image:
@@ -8,8 +9,8 @@ image:
 link: '/tracts/tract-3'
 layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
-tags: ["луки", "блудныйсын", 'притча' ,  'макартур']
-title: 'Трактат 3'
+tags: ["луки", "блудныйсын", 'притча' , 'макартур']
+title: 'Вернись домой, сын!'
 ---
 
 Содержание трактата...
