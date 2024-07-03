@@ -12,14 +12,10 @@ const tags = frontmatter.tags
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <div class="_tract-grid">
-      <Audioplayer />
-      <slot />
-      <div>
-        <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
-        <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a>))}</p>
-      </div>    
-    </div>
+    <Audioplayer />
+    <slot />
+    <p>Трактат опубликован <time>{frontmatter.pubDate.slice(0,10)}</time></p>
+    <p>Теги: {tags.map((tag) => (<a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a>))}</p>
 </BaseLayout>
 <style>
   ._tract-grid {

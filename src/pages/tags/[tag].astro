@@ -21,7 +21,7 @@ const { tag } = Astro.params;
 const { tracts } = Astro.props;
 ---
 <BaseLayout pageTitle={`трактаты по тегу ${tag}`}>
-  <ul class="_grid">
+  <ul class="_grid-container">
     {tracts.map((tract) => <TractItem tract={tract} title={tract.data.title}/>)}
   </ul>  
 </BaseLayout>

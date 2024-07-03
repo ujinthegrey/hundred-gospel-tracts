@@ -6,22 +6,11 @@ import TractItem from "../components/TractItem.astro"
 
 const pageTitle: string = 'Сто Евангельских Трактатов'
 
-/* interface ITract {
-	layout: string
-	title: string
-	pubDate: string
-	description: string
-	author: string
-	image: {url: string, alt: string}
-	tags: string[]
-} */
-//const allTracts = await Astro.glob('./tracts/*.md')
-
 const allTracts = await getCollection('tract')
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<div class="_grid-comtainer">
+	<div class="_grid-container">
 		{allTracts.map((tract) => <TractItem tract={tract} />)}
-	</>
+	</div>
 </BaseLayout>

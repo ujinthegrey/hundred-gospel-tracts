@@ -5,6 +5,7 @@
     
     /* ------ LIGHT-MODE COLORS------ */
     --lm-bg-body: #eee;
+    --lm-bg-body-2: #fff;
     --lm-bg-body-accent: #ccb;
     --lm-bg-header-footer: rgba(51, 51, 51, .9);
     --lm-bg-header-footer-accent: rgba(0, 0, 0, .9);
@@ -19,6 +20,7 @@
     
     /* ------ DARK-MODE COLORS ------ */
     --dm-bg-body: #222;
+    --dm-bg-body-2: #000;
     --dm-bg-body-accent: #f44;
     --dm-bg-header-footer: rgba(0, 0, 0, .9);
     --dm-bg-header-footer-accent: #f44;
@@ -32,6 +34,7 @@
     --dm-link-header-footer-hover: #f44;
 
     --bg-body: var(--lm-bg-body);
+    --bg-body-2: var(--lm-bg-body-2);
     --bg-body-accent: var(--lm-bg-body-accent);
     --bg-header-footer: var(--lm-bg-header-footer);
     --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
@@ -52,6 +55,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-body: var(--dm-bg-body);
+        --bg-body-2: var(--dm-bg-body-2);
         --bg-body-accent: var(--dm-bg-body-accent);
         --bg-header-footer: var(--dm-bg-header-footer);
         --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
@@ -69,6 +73,7 @@
 
 [data-theme="dark"] {
     --bg-body: var(--dm-bg-body);
+    --bg-body-2: var(--dm-bg-body-2);
     --bg-body-accent: var(--dm-bg-body-accent);
     --bg-header-footer: var(--dm-bg-header-footer);
     --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
@@ -85,6 +90,7 @@
 
 [data-theme="light"] {
     --bg-body: var(--lm-bg-body);
+    --bg-body-2: var(--lm-bg-body-2);
     --bg-body-accent: var(--lm-bg-body-accent);
     --bg-header-footer: var(--lm-bg-header-footer);
     --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
@@ -110,9 +116,9 @@ body {
 
 /* ------ WRAPPER  ------ */
 ._wrapper {
-    width: 100dvw;
+    width: 100%;
     min-height: 100dvh;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -125,11 +131,24 @@ body {
     max-width: 80ch;
     margin: 0 auto;
     padding: 0 10px;
+    overflow-x: hidden;
 }
-._grid-comtainer {
+
+._grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    ._grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 640px) {
+    ._grid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ------ HODDEN-TITLE ------ */
@@ -166,4 +185,16 @@ Even if it will be hodden, search robot will grab a better structure of our page
 ._body-link:hover,
 ._body-link:focus {
     color: var(--link-body-hover);
+}
+
+
+/* ------ IMG ------ */
+._img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: .75rem;
 }

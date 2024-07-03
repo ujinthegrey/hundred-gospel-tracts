@@ -2,19 +2,25 @@
 const { tract } = Astro.props
 ---
 <article>
-    <a class="img-link" href={`/tracts/${tract.slug}`}><img src={tract.data.image.url} alt={tract.data.image.alt}/></a>
+    <a class="img-link" href={`/tracts/${tract.slug}`}>
+        <img src={tract.data.image.url} alt={tract.data.image.alt} width="240px" height="240px"/>
+    </a>
     <p class="title">{tract.data.title}</p>
     <p class="author">{tract.data.author}</p>
-    <p>{tract.data.pubDate.toISOString().slice(0,10)}</p>
-    <!-- <p>{tract.data.tags.join(', ')}</p> -->
+    <p class="tags">{tract.data.tags.join(', ')}</p>
+    <p class="data">{tract.data.pubDate.toISOString().slice(0,10)}</p>
+    <p class="views">views</p>
 </article>
 <style>
     article {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
         align-items: center;
         justify-content: space-between;
         text-align: center;
+        background-color: var(--bg-body-2);
+        padding: 2rem .5rem;
     }
     .title {
         text-transform: uppercase;
@@ -22,6 +28,16 @@ const { tract } = Astro.props
     }
     .author {
         color: var(--text-body-accent)
+    }
+    .data,
+    .views {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+    .tags {
+        font-size: 1rem;
+        font-weight: 600;
     }
     .img-link {
         transition: translate .3s ease;
