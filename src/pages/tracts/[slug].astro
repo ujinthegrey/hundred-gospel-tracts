@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownTractLayout from '../../layouts/MarkdowmTractLayout.astro';
+
+export async function getStaticPaths() {
+  const tracts = await getCollection('tract');
+  return tracts.map(tract => ({
+    params: { slug: tract.slug }, props: { tract },
+  }));
+}
+
+const { tract } = Astro.props;
+const { Content } = await tract.render();
+---
+<MarkdownTractLayout frontmatter={tract.data}>
+    <Content />
+</MarkdownTractLayout>

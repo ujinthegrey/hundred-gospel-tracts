@@ -99,32 +99,33 @@
         display: block;
         width: 96px;
         height: 30px;
+        overflow: visible;
     }
     .container {
         display: grid;
         grid-template-columns: repeat(16, 6px);
         grid-template-rows: repeat(5, 6px);
-        /* transition: transform .3s ease; */
     }
     .item {
         height: 6px;
         width: 6px;
     }
-    .container:hover {
+    a:hover > .container,
+    a:focus > .container {
         transform: rotate(-3deg);
     }
-    .container:hover > .item {
+    a:hover > .container > .item,
+    a:focus > .container > .item  {
         border-radius: 50%;
-        /* transition: border-radius .3s ease; */
     }
     .empty {
         background-color: transparent;
     }
     .fill {
-        background-color: var(--my-green);
+        background-color: var(--text-header-footer);
     }
     .accent {
-        background-color: var(--my-red);
+        background-color: var(--text-header-footer-accent);
     }
 
 </style>

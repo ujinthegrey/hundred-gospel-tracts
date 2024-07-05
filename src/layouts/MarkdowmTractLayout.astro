@@ -1,5 +1,6 @@
 ---
 import Audioplayer from "../components/Audioplayer.astro"
+import FormattedDate from "../components/FormattedDate.astro"
 import BaseLayout from "./BaseLayout.astro"
 
 interface Frops {
@@ -13,26 +14,37 @@ const tags = frontmatter.tags
 
 <BaseLayout pageTitle={frontmatter.title}>
     <Audioplayer />
-    <slot />
-    <div class="info">
-      <p>{frontmatter.city},</p>
-      <p><time>{frontmatter.pubDate.slice(0,10)}</time></p>
-      <ul>
-        <h3 class="_hidden-title">Навигация по тегам</h3>
-        <div class="container">
-          {tags.map((tag) => (<li><a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a></li>))}
-        </div>
-      </ul>
+    <div class="background">
+      <slot />
+      <div class="info">
+        <p>{frontmatter.city},</p>
+        <p><FormattedDate date={frontmatter.pubDate} /></p>
+        <ul>
+          <h3 class="_hidden-title">Навигация по тегам</h3>
+          <div class="container">
+            {tags.map((tag) => (<li><a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a></li>))}
+          </div>
+        </ul>
+      </div>
     </div>
 </BaseLayout>
 <style>
+  .background {
+    background-color: var(--bg-body);
+    margin-block: 2rem;
+    padding: 2rem 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
   .info {
     margin-block: 2rem;
   }
-  p {
+  .info > p {
     text-align: center;
   }
   .container {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;

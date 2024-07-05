@@ -16,19 +16,25 @@
         position: relative;
         cursor: pointer;
         transition: translate .3s ease;
+        overflow: visible;
     }
-    button:hover {
+    button:hover,
+    button:focus {
         transform: rotate(5deg);
+    }
+    button:hover > span,
+    button:focus > span{
+        background-color: var(--text-header-footer-accent);
     }
     button span {
         height: 6px;
         width: 100%;
-        background-color: var(--my-green);
+        background-color: var(--text-header-footer);
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: .3s ease;
+        transition: all .3s ease;
     }
     button span:nth-child(1) {
         top: 10%;
@@ -38,7 +44,7 @@
     }
     button.active span {
         width: 120%;
-        background-color: var(--my-red);
+        /* background-color: var(--text-header-footer-accent); */
     }
     button.active span:nth-child(1) {
         top: 50%;

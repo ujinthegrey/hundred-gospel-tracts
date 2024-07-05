@@ -7,7 +7,6 @@ image:
     url: '../../img/tract-3.jpg'
     alt: 'Обложка Трактата'
 link: '/tracts/tract-3'
-layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
 tags: ["луки", "блудныйсын", 'притча' , 'макартур']
 title: 'Вернись домой, сын!'

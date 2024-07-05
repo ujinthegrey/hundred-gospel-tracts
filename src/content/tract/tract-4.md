@@ -7,7 +7,6 @@ image:
     url: '../../img/tract-4.jpg'
     alt: 'Обложка Трактата'
 link: '/tracts/tract-4'
-layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
 tags: ["откровение", "островпатмос", 'коломийцев']
 title: 'Трактат 4'

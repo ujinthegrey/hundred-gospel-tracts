@@ -1,5 +1,8 @@
 ---
+import FormattedDate from "./FormattedDate.astro"
+
 const { tract } = Astro.props
+const views = Math.floor(Math.random() *170)
 ---
 <a class="atricle-link" href={`/tracts/${tract.slug}`}>
     <article>
@@ -8,8 +11,8 @@ const { tract } = Astro.props
             <p class="bible">{tract.data.bible}</p>
             <p class="title">{tract.data.title}</p>
             <p class="author">{tract.data.author}</p>
-            <p class="data">{tract.data.pubDate.toISOString().slice(0,10)}</p>
-            <p class="views">views</p>
+            <p class="date"><FormattedDate date={tract.data.pubDate} /></p>
+            <p class="views">&#128065; {views}</p>
         </div>
     </article>
 </a>
@@ -19,8 +22,9 @@ const { tract } = Astro.props
         cursor: pointer;
         transition: box-shadow .3s ease;
     }
-    .atricle-link:hover {
-        box-shadow: 0px 0px 10px #fff;
+    .atricle-link:hover,
+    .atricle-link:focus {
+        box-shadow: 0px 0px 10px var(--shadow-body);
     }
     article {
         display: flex;
@@ -29,7 +33,7 @@ const { tract } = Astro.props
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        background-color: var(--bg-body-2);
+        background-color: var(--bg-body);
     }
 
     .info {
@@ -47,8 +51,12 @@ const { tract } = Astro.props
         text-transform: uppercase;
         font-weight: 600;
     }
-    .data,
+    .date,
     .views {
         font-size: 1rem;
     }
+    .date {
+        margin-top: 1rem;
+    }
+
 </style>

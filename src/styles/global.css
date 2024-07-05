@@ -1,52 +1,46 @@
 :root{
-    /* ------ COMMON COLORS ------ */
-    --my-green: #ccb;
-    --my-red: #f44;
-    
+ 
     /* ------ LIGHT-MODE COLORS------ */
-    --lm-bg-body: #eee;
-    --lm-bg-body-2: #fff;
-    --lm-bg-body-accent: #ccb;
-    --lm-bg-header-footer: rgba(51, 51, 51, .9);
-    --lm-bg-header-footer-accent: rgba(0, 0, 0, .9);
+    --lm-image-body: url(../../img/background-light.webp);    
+    --lm-bg-body: rgba(255, 255, 255, .9);
+    --lm-bg-body-accent: rgba(127, 255, 127, .8);
+    --lm-shadow-body: #000;
     --lm-text-body: #000;
-    --lm-text-body-accent: #f44;
-    --lm-text-header-footer: #ddd;
-    --lm-text-header-footer-accent: #fff;
-    --lm-link-body: #363;
-    --lm-link-body-hover: #633;
-    --lm-link-header-footer: #ccb;
-    --lm-link-header-footer-hover: #f44;
+    --lm-text-body-accent: #060;
+    --lm-link-body: #00007f;    
+    --lm-bg-header-footer: rgba(85, 85, 85, .9);
+    --lm-text-header-footer: #fff;
+    --lm-text-header-footer-accent: #7fff7f;
+    --lm-link-header-footer: #fff;
+    --lm-link-header-footer-hover: #7fff7f;
     
     /* ------ DARK-MODE COLORS ------ */
-    --dm-bg-body: #222;
-    --dm-bg-body-2: #000;
-    --dm-bg-body-accent: #f44;
-    --dm-bg-header-footer: rgba(0, 0, 0, .9);
-    --dm-bg-header-footer-accent: #f44;
-    --dm-text-body: #ddd;
-    --dm-text-body-accent: #f88;
+    --dm-image-body: url(../../img/background-dark.webp);    
+    --dm-bg-body: rgba(17, 17, 17, .9);
+    --dm-bg-body-accent: rgba(17, 51, 17, .8);
+    --dm-shadow-body: #fff;
+    --dm-text-body: #eee;
+    --dm-text-body-accent: #9f9;
+    --dm-link-body: #7f7fff;
+    --dm-bg-header-footer: rgba(17, 17, 17, .9);
     --dm-text-header-footer: #ddd;
-    --dm-text-header-footer-accent: #ddd;
-    --dm-link-body: #8b8;
-    --dm-link-body-hover: #b88;
-    --dm-link-header-footer: #ccb;
-    --dm-link-header-footer-hover: #f44;
+    --dm-text-header-footer-accent: #7fff7f;
+    --dm-link-header-footer: #ddd;
+    --dm-link-header-footer-hover: #7fff7f;
 
+    /* ------ DEFAULT ------ */
+    --image-body: var(--lm-image-body);    
     --bg-body: var(--lm-bg-body);
-    --bg-body-2: var(--lm-bg-body-2);
     --bg-body-accent: var(--lm-bg-body-accent);
-    --bg-header-footer: var(--lm-bg-header-footer);
-    --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
+    --shadow-body: var(--lm-shadow-body);
     --text-body: var(--lm-text-body);
     --text-body-accent: var(--lm-text-body-accent);
+    --link-body: var(--lm-link-body);
+    --bg-header-footer: var(--lm-bg-header-footer);
     --text-header-footer: var(--lm-text-header-footer);
     --text-header-footer-accent: var(--lm-text-header-footer-accent);
-    --link-body: var(--lm-link-body);
-    --link-body-hover: var(--lm-link-body-hover);
     --link-header-footer: var(--lm-link-header-footer);
     --link-header-footer-hover: var(--lm-link-header-footer-hover);
-    color-scheme: light;
 
     /* ------ SIZES ------ */
     --header-height: 50px;
@@ -54,17 +48,16 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --image-body: var(--dm-image-body);    
         --bg-body: var(--dm-bg-body);
-        --bg-body-2: var(--dm-bg-body-2);
         --bg-body-accent: var(--dm-bg-body-accent);
-        --bg-header-footer: var(--dm-bg-header-footer);
-        --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
+        --shadow-body: var(--dm-shadow-body);
         --text-body: var(--dm-text-body);
         --text-body-accent: var(--dm-text-body-accent);
+        --link-body: var(--dm-link-body);
+        --bg-header-footer: var(--dm-bg-header-footer);
         --text-header-footer: var(--dm-text-header-footer);
         --text-header-footer-accent: var(--dm-text-header-footer-accent);
-        --link-body: var(--dm-link-body);
-        --link-body-hover: var(--dm-link-body-hover);
         --link-header-footer: var(--dm-link-header-footer);
         --link-header-footer-hover: var(--dm-link-header-footer-hover);
         color-scheme: dark;
@@ -72,34 +65,32 @@
 }
 
 [data-theme="dark"] {
+    --image-body: var(--dm-image-body);    
     --bg-body: var(--dm-bg-body);
-    --bg-body-2: var(--dm-bg-body-2);
     --bg-body-accent: var(--dm-bg-body-accent);
-    --bg-header-footer: var(--dm-bg-header-footer);
-    --bg-header-footer-accent: var(--dm-bg-header-footer-accent);
+    --shadow-body: var(--dm-shadow-body);
     --text-body: var(--dm-text-body);
     --text-body-accent: var(--dm-text-body-accent);
+    --link-body: var(--dm-link-body);
+    --bg-header-footer: var(--dm-bg-header-footer);
     --text-header-footer: var(--dm-text-header-footer);
     --text-header-footer-accent: var(--dm-text-header-footer-accent);
-    --link-body: var(--dm-link-body);
-    --link-body-hover: var(--dm-link-body-hover);
     --link-header-footer: var(--dm-link-header-footer);
     --link-header-footer-hover: var(--dm-link-header-footer-hover);
     color-scheme: dark;
 }
 
 [data-theme="light"] {
+    --image-body: var(--lm-image-body);    
     --bg-body: var(--lm-bg-body);
-    --bg-body-2: var(--lm-bg-body-2);
     --bg-body-accent: var(--lm-bg-body-accent);
-    --bg-header-footer: var(--lm-bg-header-footer);
-    --bg-header-footer-accent: var(--lm-bg-header-footer-accent);
+    --shadow-body: var(--lm-shadow-body);
     --text-body: var(--lm-text-body);
     --text-body-accent: var(--lm-text-body-accent);
+    --link-body: var(--lm-link-body);
+    --bg-header-footer: var(--lm-bg-header-footer);
     --text-header-footer: var(--lm-text-header-footer);
     --text-header-footer-accent: var(--lm-text-header-footer-accent);
-    --link-body: var(--lm-link-body);
-    --link-body-hover: var(--lm-link-body-hover);
     --link-header-footer: var(--lm-link-header-footer);
     --link-header-footer-hover: var(--lm-link-header-footer-hover);
     color-scheme: light;
@@ -111,6 +102,10 @@ body {
     font-family: system-ui, sans-serif;
     font-size: 1.5rem;
     background-color: var(--bg-body);
+    background-image: var(--image-body);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--text-body)
 }
 
@@ -173,7 +168,7 @@ Even if it will be hodden, search robot will grab a better structure of our page
 ._header-footer-link:hover,
 ._header-footer-link:focus {
     color: var(--link-header-footer-hover);
-    text-shadow: 0px 0px 15px var(--bg-header-footer-accent);
+    text-shadow: 0px 0px 15px;
 }
 
 /* ------ BODY LINKS ------ */
@@ -185,7 +180,7 @@ Even if it will be hodden, search robot will grab a better structure of our page
 }
 ._body-link:hover,
 ._body-link:focus {
-    color: var(--link-body-hover);
+    text-shadow: 0px 0px 10px;
 }
 
 

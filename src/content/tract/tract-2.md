@@ -7,7 +7,6 @@ image:
     url: '../../img/tract-2.jpg'
     alt: 'Обложка Трактата'
 link: '/tracts/tract-2'
-layout: ../../layouts/MarkdowmTractLayout.astro
 pubDate: 2024-04-19
 tags: ["откровение", "островпатмос", 'коломийцев']
 title: 'Драгоценный Христос'

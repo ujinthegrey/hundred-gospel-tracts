@@ -11,7 +11,6 @@ const tractCollection = defineCollection({
         url: z.string(),
         alt: z.string()
     }),
-    layout: z.string(),
     link: z.string(),
     pubDate: z.date(),
     title: z.string(),
