@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+const pageTitle: string = 'Ошибка 404: Не найдено '
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<p>
+		К сожалению, по вашему запросу ничего не найдено :-(
+	</p>
+    <p class="back"><a href="/" class="_body-link">на главную</a></p>
+</BaseLayout>
+<style>
+	.back {
+		margin-top: 1rem;
+        text-align: center;
+	}
+</style>

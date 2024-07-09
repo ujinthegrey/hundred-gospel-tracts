@@ -13,9 +13,9 @@ const tractCollection = defineCollection({
     }),
     link: z.string(),
     pubDate: z.date(),
+    tags: z.array(z.string()),
     title: z.string(),
-
-    tags: z.array(z.string())
+    tractId: z.number(),
   }),
 })
 

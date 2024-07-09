@@ -1,10 +1,12 @@
 ---
 interface Props {
     title: string
+    tractId?: number
 }
-const {title} = Astro.props
+const {title, tractId} = Astro.props
 ---
 <div>
+    {tractId && <p class="tract-id">{`Трактат #${tractId}`}</p>}
     <h1>{title}</h1>
 </div>
 <style>
@@ -12,12 +14,19 @@ const {title} = Astro.props
         width: 100%;
         background-color: var(--bg-body-accent);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         text-wrap: balance;
         margin-block: 1rem;
         padding: 2rem 1rem;
+    }
+    .tract-id {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: lowercase;
+        letter-spacing: .5rem;
     }
     h1 {
         font-size: 2.5rem;

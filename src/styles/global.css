@@ -180,7 +180,7 @@ Even if it will be hodden, search robot will grab a better structure of our page
 }
 ._body-link:hover,
 ._body-link:focus {
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0px 0px 10px var(--shadow-body);
 }
 
 

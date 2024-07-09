@@ -1,19 +1,16 @@
 ---
+import Title from '../components/Title.astro'
 import Audioplayer from "../components/Audioplayer.astro"
 import FormattedDate from "../components/FormattedDate.astro"
 import BaseLayout from "./BaseLayout.astro"
 
-interface Frops {
-  title: string
-  description?: string
-
-}
 const { frontmatter } = Astro.props
+
 const tags = frontmatter.tags
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-    <Audioplayer />
+<BaseLayout pageTitle={frontmatter.title} tractId={frontmatter.tractId}>
+    <Audioplayer audio={frontmatter.audio} />
     <div class="background">
       <slot />
       <div class="info">

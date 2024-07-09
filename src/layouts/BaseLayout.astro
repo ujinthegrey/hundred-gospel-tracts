@@ -8,8 +8,9 @@ import Title from '../components/Title.astro'
 
 interface Props {
     pageTitle: string
+	tractId?: number
 }
-const { pageTitle } = Astro.props
+const { pageTitle, tractId } = Astro.props
 
 const theme = 'system'
 ---
@@ -24,7 +25,7 @@ const theme = 'system'
 	<body id='body' class='_wrapper'>
 		<Header/>
 		<div class="_main-content _container">
-			<Title title={pageTitle} />
+			<Title title={pageTitle} tractId={tractId}/>
 			<slot />
 		</div>
 		<Footer />
