@@ -5,12 +5,10 @@ import FormattedDate from "../components/FormattedDate.astro"
 import BaseLayout from "./BaseLayout.astro"
 
 const { frontmatter } = Astro.props
-
-const tags = frontmatter.tags
 ---
 
 <BaseLayout pageTitle={frontmatter.title} tractId={frontmatter.tractId}>
-    <Audioplayer audio={frontmatter.audio} />
+    {frontmatter.audio && <Audioplayer audio={frontmatter.audio} />}
     <div class="background">
       <slot />
       <div class="info">
@@ -19,7 +17,7 @@ const tags = frontmatter.tags
         <ul>
           <h3 class="_hidden-title">Навигация по тегам</h3>
           <div class="container">
-            {tags.map((tag) => (<li><a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a></li>))}
+            {frontmatter.tags.map((tag) => (<li><a href={`/tags/${tag}`} class="_body-link tag-link">{tag}</a></li>))}
           </div>
         </ul>
       </div>

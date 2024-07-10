@@ -2,7 +2,7 @@
 import ToggleTheme from "./ToggleTheme.astro"
 ---
 <nav id="burger-menu">
-    <div class="_container container">
+    <div class="_container">
         <h3 class='_hidden-title'>Вспомогательная навигация</h3>
         <ul>
             <li><ToggleTheme /></li>
@@ -14,20 +14,21 @@ import ToggleTheme from "./ToggleTheme.astro"
 </nav>
 <style>
     nav {
+        /* nav needs visibility because of accessibility */
         visibility: hidden;
         position: fixed;
-        top: var(--header-height);
-        left: 200vw;
-        right: -200vw;
+        left: 100vw;
+        right: -100vw;
         transition: .3s ease;
-        background-color: var(--bg-header-footer);       
-        backdrop-filter: blur(10px);
+        background-color: var(--bg-header-footer);
+        backdrop-filter: blur(15px);
         z-index: 60;
     }
     nav.open {
         visibility: visible;
         left: 0;
         right: 0;
+        top: var(--header-height);
     }
     ul {
         display: flex;
@@ -35,8 +36,5 @@ import ToggleTheme from "./ToggleTheme.astro"
         align-items: center;
         text-align: center;
         margin-bottom: 2rem;
-    }
-    .container {
-        backdrop-filter: blur(15);
     }
 </style>

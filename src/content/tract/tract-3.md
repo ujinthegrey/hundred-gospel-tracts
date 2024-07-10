@@ -1,13 +1,14 @@
 ---
+audio: '../../audio/tract-1.mp3'
 author: 'Джон МакАртур'
 bible: 'Луки 15:11-32'
-city: 'Los Angeles'
+city: 'Лос-Анжелес'
 description: 'Евангельский трактат на Луки 15'
 image:
     url: '../../img/tract-3.jpg'
     alt: 'Обложка Трактата'
 link: '/tracts/tract-3'
-pubDate: 2024-04-19
+pubDate: 2014-09-09
 tags: ["луки", "блудныйсын", 'притча' , 'макартур']
 title: 'Вернись домой, сын!'
 tractId: 3

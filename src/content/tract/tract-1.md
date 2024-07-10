@@ -1,6 +1,6 @@
 ---
-author: 'Евгений Кошелев'
 audio: '../../audio/tract-1.mp3'
+author: 'Евгений Кошелев'
 bible: 'Иоанна 3:14-15'
 city: 'Samara'
 description: 'Евангельский трактат на Иоанна 3:14-15'

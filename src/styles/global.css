@@ -2,13 +2,13 @@
  
     /* ------ LIGHT-MODE COLORS------ */
     --lm-image-body: url(../../img/background-light.webp);    
-    --lm-bg-body: rgba(255, 255, 255, .9);
+    --lm-bg-body: rgba(255, 255, 255, .8);
     --lm-bg-body-accent: rgba(127, 255, 127, .8);
     --lm-shadow-body: #000;
     --lm-text-body: #000;
     --lm-text-body-accent: #060;
     --lm-link-body: #00007f;    
-    --lm-bg-header-footer: rgba(85, 85, 85, .9);
+    --lm-bg-header-footer: rgba(85, 85, 85, .8);
     --lm-text-header-footer: #fff;
     --lm-text-header-footer-accent: #7fff7f;
     --lm-link-header-footer: #fff;
@@ -16,13 +16,13 @@
     
     /* ------ DARK-MODE COLORS ------ */
     --dm-image-body: url(../../img/background-dark.webp);    
-    --dm-bg-body: rgba(17, 17, 17, .9);
+    --dm-bg-body: rgba(17, 17, 17, .8);
     --dm-bg-body-accent: rgba(17, 51, 17, .8);
     --dm-shadow-body: #fff;
     --dm-text-body: #eee;
     --dm-text-body-accent: #9f9;
     --dm-link-body: #7f7fff;
-    --dm-bg-header-footer: rgba(17, 17, 17, .9);
+    --dm-bg-header-footer: rgba(17, 17, 17, .8);
     --dm-text-header-footer: #ddd;
     --dm-text-header-footer-accent: #7fff7f;
     --dm-link-header-footer: #ddd;

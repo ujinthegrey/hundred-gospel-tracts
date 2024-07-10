@@ -3,6 +3,7 @@ import { z, defineCollection } from 'astro:content'
 const tractCollection = defineCollection({
   type: 'content', 
   schema: z.object({
+    audio: z.string(),
     author: z.string(),
     bible: z.string(),
     city: z.string(),

@@ -1,4 +1,5 @@
 ---
+audio: '../../audio/tract-2.mp3'
 author: 'Алексей Коломийцев'
 bible: 'Откровение 1:4-9'
 city: 'Sacramento'
