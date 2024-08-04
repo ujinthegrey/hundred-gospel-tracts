@@ -22,9 +22,16 @@ const views = Math.floor(Math.random() *170)
         cursor: pointer;
         transition: box-shadow .3s ease;
     }
+    .atricle-link img {
+        filter: grayscale(1);
+    }
     .atricle-link:hover,
     .atricle-link:focus {
         box-shadow: 0px 0px 10px var(--shadow-body);
+    }
+    .atricle-link:hover img,
+    .atricle-link:focus img{
+        filter: grayscale(0);
     }
     article {
         display: flex;

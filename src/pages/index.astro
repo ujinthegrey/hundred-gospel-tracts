@@ -10,7 +10,7 @@ const allTracts = await getCollection('tract')
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<div class="_grid-container">
+	<div class="_grid-container _blur-container">
 		{allTracts.map((tract) => (
 			<TractItem tract={tract} url={`/tracts/${tract.slug}/`} title={tract.data.title} />
 		))}
